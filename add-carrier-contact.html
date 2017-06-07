@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Office of America - Carrier Contact Database</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/phone-mask.js"></script>
+
+    <!-- Chosen Multi Select -->
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/style.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/docsupport/prism.css">
+    <link rel="stylesheet" href="chosen_v1.6.2/chosen.css">
+    <script type="text/javascript" src="chosen_v1.6.2/chosen.jquery.js"></script>
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/prism.js"></script>
+
+</head>
+
+<body class="portal-pad portal-page">
+    <nav class="navbar navbar-inverse navbar-fixed-top menu-top">
+        <div class="container-fluid menu-margin">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sidebar1" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="150" alt="Insurance Office of America">
+                </a>
+                <h4 class="company-title">Insurance Office of America</h4>
+                <h5>Carrier Contact Database</h5>
+            </div>
+            <div id="navbar" role="navigation" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Chris Robertson <i class="fa fa-cog" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <div class="arrow-up"></div>
+                            <li><a href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid content">
+        <div class="row sidebar-container">
+            <div id="sidebar" class="col-xs-12 col-sm-3 col-md-12 sidebar1 sidebar navbar-collapse collapse">
+                <ul class="nav nav-sidebar">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-dashboard fa-2x" aria-hidden="true"></i><span>Dashboard</span>
+                        </a>
+                        <hr />
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="carrier-search.html" onclick="location.href='carrier-search.html';"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i><span> Carriers</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="add-carrier-contact.html">Add New</a>
+                                <hr>
+                            </li>
+                            <li><a href="carrier-search.html">View Carriers</a>
+                                <hr>
+                            </li>
+                        </ul>
+                        <hr />
+                    </li>
+
+                    <ul class="nav nav-sidebar nav-sidebar2">
+                        <li class="dropdown">
+                            <hr>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cog fa-3x" aria-hidden="true"></i><span> Chris Robertson</span>
+                     <i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Edit Profile</a>
+                                </li>
+                                <li><a href="#">Logout</a>
+                                </li>
+                            </ul>
+                            <hr>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <!-- Body -->
+            <div class="body-container">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title-header spacerbottom20">
+                    <div class="pull-left head-drop">
+                        <div class="btn-group">
+                            Add Carrier Contact
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-content">
+
+                    <form>
+
+                        <div class="row">
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <label class="required control-label" for="">Carrier</label>
+                                <select id="" name="" class="form-control">
+                                    <option value="">-- Please Select Carrier --</option>
+                                    <option value="">Carrier 1</option>
+                                    <option value="">Carrier 2</option>
+                                    <option value="">Carrier 3</option>
+                                    <option value="">Carrier 4</option>
+                                    <option value="">Carrier 5</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <label class="required control-label" for="">Agency</label>
+                                <select data-placeholder=" " multiple class="chosen-select-width" tabindex="16">
+                                    <option>IOA</option>
+                                    <option>Eagle</option>
+                                    <option>IOA National</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <label class="required control-label" for="">Line of Business</label>
+                                <select data-placeholder=" " multiple class="chosen-select-width" tabindex="16">
+                                    <option>Commercial</option>
+                                    <option>Personal</option>
+                                    <option>Benefits</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <label class="required control-label" for="">Contact Name:</label>
+                                <input id="" name="" class="form-control input-md" required="" type="text">
+                            </div>
+
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <label class="control-label" for="">Contact Title:</label>
+                                <select id="" name="" class="form-control">
+                                    <option value="">-- Please Select Title--</option>
+                                    <option value="">Sample Title 1</option>
+                                    <option value="">Sample Title 2</option>
+                                    <option value="">Sample Title 3</option>
+                                    <option value="">Sample Title 4</option>
+                                    <option value="">Sample Title 5</option>
+                                </select>
+                            </div>
+
+
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <label class="control-label" for="">Contact Department:</label>
+                                <select id="" name="" class="form-control">
+                                    <option value="">-- Please Select Department--</option>
+                                    <option value="">Sample Department 1</option>
+                                    <option value="">Sample Department 2</option>
+                                    <option value="">Sample Department 3</option>
+                                    <option value="">Sample Department 4</option>
+                                    <option value="">Sample Department 5</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <label class="required control-label" for="">Contact Phone Number:</label>
+                                <input id="phone" name="" class="form-control input-md" type="text" />
+                                <!--<input id="" name="" class="form-control input-md bfh-phone" required="" type="text">-->
+                            </div>
+
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <label class="required control-label" for="">Contact Email:</label>
+                                <input id="" name="" class="form-control input-md" required="" type="text">
+                            </div>
+
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <label class="control-label" for="">State:</label>
+                                <select id="address-state" name="address-state" class="form-control street-address">
+                                    <option value="-- Plase Select State --<">-- Plase Select State --</option>
+                                    <option value="AL - Alabama">AL - Alabama</option>
+                                    <option value="AK - Alaska">AK - Alaska</option>
+                                    <option value="AZ - Arizona">AZ - Arizona</option>
+                                    <option value="AR - Arkansas">AR - Arkansas</option>
+                                    <option value="CA - California">CA - California</option>
+                                    <option value="CO - Colorado">CO - Colorado</option>
+                                    <option value="CT - Connecticut">CT - Connecticut</option>
+                                    <option value="DE - Delaware">DE - Delaware</option>
+                                    <option value="DC - District of Columbia">DC - District of Columbia</option>
+                                    <option value="FL - Florida">FL - Florida</option>
+                                    <option value="GA - Georgia">GA - Georgia</option>
+                                    <option value="HI - Hawaii">HI - Hawaii</option>
+                                    <option value="ID - Idaho">ID - Idaho</option>
+                                    <option value="IL - Illinois">IL - Illinois</option>
+                                    <option value="IN - Indiana">IN - Indiana</option>
+                                    <option value="IA - Iowa">IA - Iowa</option>
+                                    <option value="KS - Kansas">KS - Kansas</option>
+                                    <option value="KY - Kentucky">KY - Kentucky</option>
+                                    <option value="LA - Louisiana">LA - Louisiana</option>
+                                    <option value="ME - Maine">ME - Maine</option>
+                                    <option value="MD - Maryland">MD - Maryland</option>
+                                    <option value="MA - Massachusetts">MA - Massachusetts</option>
+                                    <option value="MI - Michigan">MI - Michigan</option>
+                                    <option value="MN - Minnesota">MN - Minnesota</option>
+                                    <option value="MS - Mississippi">MS - Mississippi</option>
+                                    <option value="MO - Missouri">MO - Missouri</option>
+                                    <option value="MT - Montana">MT - Montana</option>
+                                    <option value="NE - Nebraska">NE - Nebraska</option>
+                                    <option value="NV - Nevada">NV - Nevada</option>
+                                    <option value="NH - New Hampshire">NH - New Hampshire</option>
+                                    <option value="NJ - New Jersey">NJ - New Jersey</option>
+                                    <option value="NM - New Mexico">NM - New Mexico</option>
+                                    <option value="NY - New York">NY - New York</option>
+                                    <option value="NC - North Carolina">NC - North Carolina</option>
+                                    <option value="ND - North Dakota">ND - North Dakota</option>
+                                    <option value="OH - Ohio">OH - Ohio</option>
+                                    <option value="OK - Oklahoma">OK - Oklahoma</option>
+                                    <option value="OR - Oregon">OR - Oregon</option>
+                                    <option value="PA - Pennsylvania">PA - Pennsylvania</option>
+                                    <option value="RI - Rhode Island">RI - Rhode Island</option>
+                                    <option value="SC - South Carolina">SC - South Carolina</option>
+                                    <option value="SD - South Dakota">SD - South Dakota</option>
+                                    <option value="TN - Tennessee">TN - Tennessee</option>
+                                    <option value="TX - Texas">TX - Texas</option>
+                                    <option value="UT - Utah">UT - Utah</option>
+                                    <option value="VT - Vermont">VT - Vermont</option>
+                                    <option value="VA - Virginia">VA - Virginia</option>
+                                    <option value="WA - Washington">WA - Washington</option>
+                                    <option value="WV - West Virginia">WV - West Virginia</option>
+                                    <option value="WI - Wisconsin">WI - Wisconsin</option>
+                                    <option value="WY - Wyoming">WY - Wyoming</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <label class="required control-label" for="">Region:</label>
+                                <select data-placeholder=" " multiple class="chosen-select-width" tabindex="16">
+                                    <option>Southeast</option>
+                                    <option>Southwest</option>
+                                    <option>West</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <label class="required control-label" for="">Acquisition Contact:</label>
+                                <input id="" name="" class="form-control input-md" required="" type="text">
+                            </div>
+
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <label class="required control-label" for="">Acquisition Contact Email:</label>
+                                <input id="" name="" class="form-control input-md" required="" type="text">
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <div class="buttons-footer">
+                        <button id="cancel" name="cancel" class="btn btn-default"> Cancel</button>
+                        <button id="save" name="save" class="pull-right btn btn-primary"> Submit</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center copyright">
+        <p>Copyright &#169; 2017 Insurance Office of America. All rights reserved. Version 1.0</p>
+    </div>
+    <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
+
+</body>
+</html>
