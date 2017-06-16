@@ -1,3 +1,7 @@
+## 2017-6-16
+• Created the ability to assign line of business to carriers
+• Edited carrier results search page
+
 ## 2017-6-15
 • Re-organzied navigation menu
 • Created Add new carrier (carriers.html) 
