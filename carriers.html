@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="css/edit-add-application.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/add-row.js"></script>
 
     <!-- Chosen Multi Select -->
     <link rel="stylesheet" href="chosen_v1.6.2/docsupport/style.css">
@@ -148,15 +147,27 @@
                             </select>
                         </div>
 
+                        <div class="form col-sm-12 col-md-12 col-lg-4">
+                            <label class="control-label" for="show-dashboard">Show on dashboard:</label> 
+                                <label for="checkbox">
+                                <input checked name="checkbox" id="checkbox-sample" value="1" type="checkbox">
+                            </label>
+                        </div>
+
                     </fieldset>
                 </form>
+
+                <div class="buttons-footer">
+                    <button id="cancel" name="cancel" class="btn btn-default smallBtn"> Cancel</button>
+                    <button id="save" name="save" class="pull-right btn btn-primary smallBtn"> Save Changes</button>
+                </div>
 
                 <div class="panel-primary">
                     <div id="nav-tabs">
                         <ul class="nav nav-tabs spacer20">
                             <li class="active"><a data-toggle="tab" href="#contact-title" aria-expanded="false">Contact Titles</a>
                             </li>
-                            <li class="sep"><a data-toggle="tab" href="#contact-department" aria-expanded="false">Contact Departments</a>
+                            <li class="sep"><a data-toggle="tab" href="#contact-department" aria-expanded="false">Departments</a>
                             </li>
                             <li class="sep"><a data-toggle="tab" href="#region" aria-expanded="true">Regions</a>
                             </li>
@@ -166,40 +177,21 @@
                     <div class="tab-content">
                         <div id="contact-title" class="tab-pane tabs-info portal-tables fade in active">
 
-                            <table class="table-hover table-striped table-condensed cf app-tables">
-                                <thead class="cf">
-                                    <caption class="view">Add New</caption>
-                                    <tr>
-                                        <th class="col-lg-2">Contact Title</th>
-                                        <th class="col-lg-2 action">Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="contact-title-row-container">
-                                    <tr>
-                                        <td data-title="Contact Title">
-                                            <label class="required control-label sr-only" for="">Contact Title:</label>
-                                            <input id="name" name="name" class="form-control input-md" required="" type="text">
-                                        </td>
-                                        <td data-title="Actions" name="action" class="actionBtn">
-                                            <div class="btn-cell add-row">
-                                                <a href="#" class="actionDarkBlue add-permission-row"><i class="fa fa-plus"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="pull-right">
+                                <a href="#" class="btn carrier-btn add-button pull-right"><i class="fa fa-plus"></i> Add Contact Title</a>
+                            </div>
 
                             <table class="table-hover table-striped table-condensed cf app-tables">
                                 <thead class="cf">
-                                    <caption class="view">Entries</caption>
                                     <tr>
                                         <th class="col-lg-2"></th>
                                         <th class="col-lg-2 action"></th>
                                     </tr>
                                 </thead>
+
                                 <tbody>
                                     <tr>
-                                        <td data-title="Contact Title">Business Analyst</td>
+                                        <td data-title="Contact Title">Underwriter</td>
                                         <td data-title="Actions" class="actionBtn">
                                             <div class="btn-cell">
                                                 <a href="" class="actionRed"><i class="fa fa-close"></i></a>
@@ -212,7 +204,7 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Title">General Manager</td>
+                                        <td data-title="Contact Title">Accounting</td>
                                         <td data-title="Actions" class="actionBtn">
                                             <div class="btn-cell">
                                                 <a href="" class="actionRed"><i class="fa fa-close"></i></a>
@@ -225,7 +217,7 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Title">Service Manager</td>
+                                        <td data-title="Contact Title">Customer Service</td>
                                         <td data-title="Actions" class="actionBtn">
                                             <div class="btn-cell">
                                                 <a href="" class="actionRed"><i class="fa fa-close"></i></a>
@@ -238,7 +230,7 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Title">Operation Manager</td>
+                                        <td data-title="Contact Title">Manager</td>
                                         <td data-title="Actions" class="actionBtn">
                                             <div class="btn-cell">
                                                 <a href="" class="actionRed"><i class="fa fa-close"></i></a>
@@ -251,7 +243,7 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Title">Head of Services</td>
+                                        <td data-title="Contact Title">Services</td>
                                         <td data-title="Actions" class="actionBtn">
                                             <div class="btn-cell">
                                                 <a href="" class="actionRed"><i class="fa fa-close"></i></a>
@@ -318,37 +310,18 @@
 
                             <div id="contact-department" class="tab-pane tabs-info portal-tables fade in">
 
-                                <table class="table-hover table-striped table-condensed cf app-tables">
-                                    <thead class="cf">
-                                        <caption class="view">Add New</caption>
-                                        <tr>
-                                            <th class="col-lg-2">Contact Department</th>
-                                            <th class="col-lg-2 action">Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="contact-department-container">
-                                        <tr>
-                                            <td data-title="Department">
-                                                <label class="required control-label sr-only" for="">Contact Department:</label>
-                                                <input id="name" name="name" class="form-control input-md" required="" type="text">
-                                            </td>
-                                            <td data-title="Actions" name="action" class="actionBtn">
-                                                <div class="btn-cell add-row">
-                                                    <a href="#" class="actionDarkBlue add-row add-contact-department-row"><i class="fa fa-plus"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="pull-right">
+                                    <a href="#" class="btn carrier-btn add-button pull-right"><i class="fa fa-plus"></i> Add Department</a>
+                                </div>
 
                                 <table class="table-hover table-striped table-condensed cf app-tables">
                                     <thead class="cf">
-                                        <caption class="view">Entries</caption>
                                         <tr>
                                             <th class="col-lg-2"></th>
                                             <th class="col-lg-2 action"></th>
                                         </tr>
                                     </thead>
+
                                     <tbody>
                                         <tr>
                                             <td data-title="Department">Accounting</td>
@@ -469,38 +442,18 @@
 
                                 <div id="region" class="tab-pane tabs-info portal-tables fade in">
 
-                                    <table class="table-hover table-striped table-condensed cf app-tables">
-                                        <thead class="cf">
-                                            <caption class="view">Add New</caption>
-                                            <tr>
-                                                <th class="col-lg-2">Region</th>
-                                                <th class="col-lg-2 action">Actions</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="region-container">
-
-                                            <tr>
-                                                <td data-title="Region">
-                                                    <label class="required control-label sr-only" for="">Region</label>
-                                                    <input id="name" name="name" class="form-control input-md" required="" type="text">
-                                                </td>
-                                                <td data-title="Actions" name="action" class="actionBtn">
-                                                    <div class="btn-cell add-row">
-                                                        <a href="#" class="actionDarkBlue add-row add-region-row"><i class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="pull-right">
+                                        <a href="#" class="btn carrier-btn add-button pull-right"><i class="fa fa-plus"></i> Add Region</a>
+                                    </div>
 
                                     <table class="table-hover table-striped table-condensed cf app-tables">
                                         <thead class="cf">
-                                            <caption class="view">Entries</caption>
                                             <tr>
                                                 <th class="col-lg-2"></th>
                                                 <th class="col-lg-2 action"></th>
                                             </tr>
                                         </thead>
+
                                         <tbody>
                                             <tr>
                                                 <td data-title="Region">Central</td>
@@ -620,11 +573,6 @@
                                     </div>
                                 </div>
                                 <!-- Modal -->
-
-                                <div class="buttons-footer">
-                                    <button id="cancel" name="cancel" class="btn btn-default smallBtn"> Cancel</button>
-                                    <button id="save" name="save" class="pull-right btn btn-primary smallBtn"> Save Changes</button>
-                                </div>
                     </div>
                 </div>
 
@@ -635,7 +583,7 @@
         <div class="text-center copyright">
             <p>Copyright &#169; 2017 Insurance Office of America. All rights reserved. Version 2.3.3</p>
         </div>
-        <script type="text/javascript" src="../js/tooltip.js"></script>
+        <script type="text/javascript" src="js/nav-tabs-homepage.js"></script>
         <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
 
 </body>

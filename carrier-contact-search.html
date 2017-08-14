@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/carriers.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
@@ -120,20 +121,13 @@
                     <div class="container-content">
                         <form>
                             <div class="row">
-                                <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <div class="form-group col-sm-12 col-md-6 col-lg-3">
                                     <label class="control-label" for="">Carrier</label>
-                                    <select id="" name="" class="form-control">
-                                        <option value="">-- Please Select Carrier --</option>
-                                        <option value="">Carrier 1</option>
-                                        <option value="">Carrier 2</option>
-                                        <option value="">Carrier 3</option>
-                                        <option value="">Carrier 4</option>
-                                        <option value="">Carrier 5</option>
-                                    </select>
+                                    <input id="" name="" class="form-control input-md" required="" type="text">
                                 </div>
 
-                                <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                    <label class="required control-label" for="">Agency</label>
+                                <div class="form-group col-sm-12 col-md-6 col-lg-3">
+                                    <label class="control-label" for="">Agency</label>
                                     <select data-placeholder=" " multiple class="chosen-select-width" tabindex="16">
                                         <option>IOA</option>
                                         <option>Eagle</option>
@@ -141,88 +135,24 @@
                                     </select>
                                 </div>
 
-                                <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                    <label class="required control-label" for="">Line of Business</label>
+                                <div class="form-group col-sm-12 col-md-6 col-lg-3">
+                                    <label class="control-label" for="">Line of Business</label>
                                     <select data-placeholder=" " multiple class="chosen-select-width" tabindex="16">
                                         <option>Commercial</option>
                                         <option>Personal</option>
                                         <option>Benefits</option>
                                     </select>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <div class="form-group col-sm-12 col-md-6 col-lg-3">
                                     <label class="control-label" for="">Contact Name:</label>
                                     <input id="" name="" class="form-control input-md" required="" type="text">
                                 </div>
 
-                                <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                    <label class="required control-label" for="">Region:</label>
-                                    <select data-placeholder=" " multiple class="chosen-select-width" tabindex="16">
-                                        <option>Southeast</option>
-                                        <option>Southwest</option>
-                                        <option>West</option>
-                                    </select>
+                                <div class="form-group col-sm-12 col-md-6 col-lg-4">
+                                    <button id="carriercontact" class="btn btn-primary">Clear Filters</button>
                                 </div>
 
-                                <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                    <label class="control-label" for="">State:</label>
-                                    <select id="address-state" name="address-state" class="form-control street-address">
-                                        <option value="-- Plase Select State --<">-- Plase Select State --</option>
-                                        <option value="AL - Alabama">AL - Alabama</option>
-                                        <option value="AK - Alaska">AK - Alaska</option>
-                                        <option value="AZ - Arizona">AZ - Arizona</option>
-                                        <option value="AR - Arkansas">AR - Arkansas</option>
-                                        <option value="CA - California">CA - California</option>
-                                        <option value="CO - Colorado">CO - Colorado</option>
-                                        <option value="CT - Connecticut">CT - Connecticut</option>
-                                        <option value="DE - Delaware">DE - Delaware</option>
-                                        <option value="DC - District of Columbia">DC - District of Columbia</option>
-                                        <option value="FL - Florida">FL - Florida</option>
-                                        <option value="GA - Georgia">GA - Georgia</option>
-                                        <option value="HI - Hawaii">HI - Hawaii</option>
-                                        <option value="ID - Idaho">ID - Idaho</option>
-                                        <option value="IL - Illinois">IL - Illinois</option>
-                                        <option value="IN - Indiana">IN - Indiana</option>
-                                        <option value="IA - Iowa">IA - Iowa</option>
-                                        <option value="KS - Kansas">KS - Kansas</option>
-                                        <option value="KY - Kentucky">KY - Kentucky</option>
-                                        <option value="LA - Louisiana">LA - Louisiana</option>
-                                        <option value="ME - Maine">ME - Maine</option>
-                                        <option value="MD - Maryland">MD - Maryland</option>
-                                        <option value="MA - Massachusetts">MA - Massachusetts</option>
-                                        <option value="MI - Michigan">MI - Michigan</option>
-                                        <option value="MN - Minnesota">MN - Minnesota</option>
-                                        <option value="MS - Mississippi">MS - Mississippi</option>
-                                        <option value="MO - Missouri">MO - Missouri</option>
-                                        <option value="MT - Montana">MT - Montana</option>
-                                        <option value="NE - Nebraska">NE - Nebraska</option>
-                                        <option value="NV - Nevada">NV - Nevada</option>
-                                        <option value="NH - New Hampshire">NH - New Hampshire</option>
-                                        <option value="NJ - New Jersey">NJ - New Jersey</option>
-                                        <option value="NM - New Mexico">NM - New Mexico</option>
-                                        <option value="NY - New York">NY - New York</option>
-                                        <option value="NC - North Carolina">NC - North Carolina</option>
-                                        <option value="ND - North Dakota">ND - North Dakota</option>
-                                        <option value="OH - Ohio">OH - Ohio</option>
-                                        <option value="OK - Oklahoma">OK - Oklahoma</option>
-                                        <option value="OR - Oregon">OR - Oregon</option>
-                                        <option value="PA - Pennsylvania">PA - Pennsylvania</option>
-                                        <option value="RI - Rhode Island">RI - Rhode Island</option>
-                                        <option value="SC - South Carolina">SC - South Carolina</option>
-                                        <option value="SD - South Dakota">SD - South Dakota</option>
-                                        <option value="TN - Tennessee">TN - Tennessee</option>
-                                        <option value="TX - Texas">TX - Texas</option>
-                                        <option value="UT - Utah">UT - Utah</option>
-                                        <option value="VT - Vermont">VT - Vermont</option>
-                                        <option value="VA - Virginia">VA - Virginia</option>
-                                        <option value="WA - Washington">WA - Washington</option>
-                                        <option value="WV - West Virginia">WV - West Virginia</option>
-                                        <option value="WI - Wisconsin">WI - Wisconsin</option>
-                                        <option value="WY - Wyoming">WY - Wyoming</option>
-                                    </select>
-                                </div>
                             </div>
                         </form>
                     </div>
@@ -239,28 +169,31 @@
                                     <table class="table-hover table-striped table-condensed cf">
                                         <thead class="cf">
                                             <tr>
-                                                <th>Carrier</th>
-                                                <th>Agency</th>
-                                                <th>Line of Business</th>
                                                 <th>Contact Name</th>
                                                 <th>Contact Email</th>
                                                 <th>Contact Phone Number</th>
-                                                <th>Region</th>
-                                                <th>State</th>
+                                                <th>Title</th>
+                                                <th>Carrier</th>
+                                                <th>Agency</th>
+                                                <th>Line of Business</th>
+                                                <th>Entered Date</th>
+                                                <th>Notes</th>
                                                 <th class="action">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 
                                             <tr>
-                                                <td data-title="Carrier">CNA</td>
-                                                <td data-title="Agency">IOA</td>
-                                                <td data-title="Line of Business">Commercial</td>
                                                 <td data-title="Contact Name">Bernard Ware</td>
                                                 <td data-title="Contact Email"><a href="mailto:bernard.ware@company.com">bernard.ware@company.com</td>
                                                 <td data-title="Contact Phone Number">407-788-3000</td>
-                                                <td data-title="Region">Southeast</td>
-                                                <td data-title="State">Florida</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">CNA</td>
+                                                <td data-title="Agency">IOA</td>
+                                                <td data-title="Line of Business">Commercial</td>
+                                                <td data-title="Entered Date">7/21/2017</td>
+                                                <td data-title="Notes"> <a href="#" data-toggle="tooltip" title="Call before 10am. After 10am, no one is reachable as his calendar is full. Out of office on Mondays and Tuesdays.">Call before 10am... </a></td>
+                                                <!--Only use first three words for tooltip-->
                                                 <td data-title="Action" class="actionBtn">
                                                    <div class="btn-cell">
                                                         <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
@@ -269,14 +202,15 @@
                                             </tr>
 
                                             <tr>
-                                                <td data-title="Carrier">Nationwide</td>
-                                                <td data-title="Agency">Eagle</td>
-                                                <td data-title="Line of Business">Personal</td>
                                                 <td data-title="Contact Name">William Carter</td>
                                                 <td data-title="Contact Email"><a href="mailto:william.carter@company.com">william.carter@company.com</td>
                                                 <td data-title="Contact Phone Number">407-788-3000</td>
-                                                <td data-title="Region">Northeast</td>
-                                                <td data-title="State">Florida</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">CNA</td>
+                                                <td data-title="Agency">IOA</td>
+                                                <td data-title="Line of Business">Commercial</td>
+                                                <td data-title="Entered Date">7/21/2017</td>
+                                                <td data-title="Notes"><a href="#" data-toggle="tooltip" title="Please do not call. Only email in order to create a record.">Please do not... </a><i class="fa fa-flag red"></i> </td>
                                                 <td data-title="Action" class="actionBtn">
                                                    <div class="btn-cell">
                                                         <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
@@ -285,46 +219,32 @@
                                             </tr>
 
                                             <tr>
-                                                <td data-title="Carrier">Hartford</td>
-                                                <td data-title="Agency">IOA National</td>
-                                                <td data-title="Line of Business">Benefits</td>
                                                 <td data-title="Contact Name">Graham Hazel</td>
                                                 <td data-title="Contact Email"><a href="mailto:graham.hazel@company.com">graham.hazel@company.com</td>
                                                 <td data-title="Contact Phone Number">407-788-3000</td>
-                                                <td data-title="Region">Central</td>
-                                                <td data-title="State">Florida</td>
-                                                <td data-title="Action" class="actionBtn">
-                                                   <div class="btn-cell">
-                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td data-title="Carrier">Liberty Mutual</td>
-                                                <td data-title="Agency">Eagle</td>
-                                                <td data-title="Line of Business">Personal</td>
-                                                <td data-title="Contact Name">Jason Pettway</td>
-                                                <td data-title="Contact Email"><a href="mailto:jason.pettway@company.com">jason.pettway@company.com</td>
-                                                <td data-title="Contact Phone Number">407-788-3000</td>
-                                                <td data-title="Region">Southwest</td>
-                                                <td data-title="State">Florida</td>
-                                                <td data-title="Action" class="actionBtn">
-                                                   <div class="btn-cell">
-                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td data-title="Carrier">Nationwide</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">CNA</td>
                                                 <td data-title="Agency">IOA</td>
                                                 <td data-title="Line of Business">Commercial</td>
-                                                <td data-title="Contact Name">Shawn Walters</td>
-                                                <td data-title="Contact Email"><a href="mailto:shawn.walters@company.com">shawn.walters@company.com</td>
+                                                <td data-title="Entered Date">7/21/2017</td>
+                                                <td data-title="Notes"> <a href="#" data-toggle="tooltip" title="Call before 10am. After 10am, no one is reachable as his calendar is full. Out of office on Mondays and Tuesdays.">Call before 10am... </a></td>
+                                                <td data-title="Action" class="actionBtn">
+                                                   <div class="btn-cell">
+                                                        <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td data-title="Contact Name">Jason Pettway</td>
+                                                <td data-title="Contact Email"><a href="mailto:bernard.ware@company.com">jason.pettway@company.com</td>
                                                 <td data-title="Contact Phone Number">407-788-3000</td>
-                                                <td data-title="Region">Soutwest</td>
-                                                <td data-title="State">Florida</td>
+                                                <td data-title="Title">Supervisor</td>
+                                                <td data-title="Carrier">CNA</td>
+                                                <td data-title="Agency">IOA</td>
+                                                <td data-title="Line of Business">Commercial</td>
+                                                <td data-title="Entered Date">7/21/2017</td>
+                                                <td data-title="Notes"> <a href="#" data-toggle="tooltip" title="Call before 10am. After 10am, no one is reachable as his calendar is full. Out of office on Mondays and Tuesdays.">Call before 10am... </a></td>
                                                 <td data-title="Action" class="actionBtn">
                                                    <div class="btn-cell">
                                                         <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
@@ -372,6 +292,7 @@
         <p>Copyright &#169; 2017 Insurance Office of America. All rights reserved. Version 1.0</p>
     </div>
     <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
+    <script type="text/javascript" src="js/tooltip.js"></script>
 
 </body>
 </html>

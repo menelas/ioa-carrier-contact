@@ -123,14 +123,12 @@
                     <ul class="nav nav-pills">
                         <li class="active"><a data-toggle="pill" href="#contact">Contact</a>
                         </li>
-                        <li><a data-toggle="pill" href="#notes">Notes</a>
-                        </li>
                         <li><a data-toggle="pill" href="#history">History</a>
                         </li>
                     </ul>
 
                     <div class="tab-content">
-                        <div id="contact" class="tab-pane fade in">
+                        <div id="contact" class="tab-pane fade in active">
 
                             <form>
                                 <div class="row">
@@ -197,7 +195,7 @@
                                 <div class="row">
 
                                     <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                        <label class="required control-label" for="">Contact Phone Number:</label>
+                                        <label class="control-label" for="">Contact Phone Number:</label>
                                         <input id="phone" name="" class="form-control input-md" value="407-788-3000" type="text" />
                                     </div>
 
@@ -276,25 +274,16 @@
                                     </div>
 
                                     <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                        <label class="required control-label" for="">Acquisition Contact:</label>
+                                        <label class="control-label" for="">Acquisition Contact:</label>
                                         <input id="" name="" class="form-control input-md" required="" value="Ted Barnes" type="text">
                                     </div>
 
                                     <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                        <label class="required control-label" for="">Acquisition Contact Email:</label>
+                                        <label class="control-label" for="">Acquisition Contact Email:</label>
                                         <input id="" name="" class="form-control input-md" required="" value="ted.barnes@company.com" type="text">
                                     </div>
                                 </div>
                             </form>
-
-                            <div class="buttons-footer">
-                                <button id="cancel" name="cancel" class="btn btn-default"> Cancel</button>
-                                <button id="save" name="save" class="pull-right btn btn-primary"> Save</button>
-                            </div>
-
-                        </div>
-
-                        <div id="notes" class="tab-pane fade in active">
 
                             <!--Notes-->
                             <div class="tablecontainer">
@@ -339,7 +328,7 @@
 
                                                 <tr>
                                                     <td data-title="Created Date">2/1/2017</td>
-                                                    <td data-title="Note">Only reachable during 10am-11am through phone.</td>
+                                                    <td data-title="Note">Only reachable during 10am-11am through phone. <i class="fa fa-flag red"></i> </td>
                                                     <td data-title="Created By">Jason Lacroix</td>
                                                 </tr>
 
@@ -374,6 +363,12 @@
                                 </div>
                             </div>
                             <!--Notes-->
+
+                            <div class="buttons-footer">
+                                <button id="cancel" name="cancel" class="btn btn-default"> Cancel</button>
+                                <button id="save" name="save" class="pull-right btn btn-primary"> Save</button>
+                            </div>
+
                         </div>
 
                         <div id="history" class="tab-pane fade in">
@@ -468,10 +463,15 @@
                                     <h4 class="modal-title">Add Note </h4>
                                 </div>
                                 <div class="modal-body">
-                                    <div class="form-group">
-                                        <label class="sr-only control-label" for="">Note:</label>
-                                        <textarea class="form-control" maxlength="4000" spellcheck="true" rows="11" cols="20" placeholder="Please enter note (maximum of 4000 characters)" id=""></textarea>
-                                    </div>
+
+                                    <label class="sr-only control-label" for="">Note:</label>
+                                    <textarea class="form-control" maxlength="4000" spellcheck="true" rows="11" cols="20" placeholder="Please enter note (maximum of 4000 characters)" id=""></textarea>
+
+                                    <i class="fa fa-flag red"></i>
+                                    <label class="control-label" for="flag">Flag:</label> 
+                                        <label for="checkbox">
+                                            <input name="checkbox" id="checkbox-sample" value="1" type="checkbox">
+                                    </label>
                                 </div>
 
                                 <div class="modal-footer">

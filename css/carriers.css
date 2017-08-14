@@ -2,6 +2,10 @@
     padding: 15px;
 }
 
+.form-group {
+	margin-bottom: 15px;
+}
+
 .buttons-footer {
     padding: 15px;
 }

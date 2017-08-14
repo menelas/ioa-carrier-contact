@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/app.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
 </head>
 
 <body class="portal-pad portal-page">
@@ -101,11 +102,11 @@
                 <div class="tablecontainer">
                     <div class="col-md-12 col-xs-12 panel-heading tableheader">
                         <div class="pull-left head-drop">
-                             Recently Added Carrier Contacts
+                             Carriers
                         </div>
 
                         <div class="pull-right">
-                            <a href="carrier-contact-search.html" class="btn carrier-btn pull-right"></i> Search</a>
+                            <a href="carrier-search.html" class="btn carrier-btn pull-right"></i> Search</a>
                         </div>
                     </div>
                     <div class="panel-body">
@@ -113,30 +114,62 @@
                             <table class="table-hover table-striped table-condensed cf">
                                 <thead class="cf">
                                     <tr>
-                                        <th>Contact Name</th>
-                                        <th>Contact Email</th>
-                                        <th>Contact Phone Number</th>
                                         <th>Carrier</th>
                                         <th>Agency</th>
                                         <th>Line of Business</th>
-                                        <th>State</th>
-                                        <th>Region</th>
-                                        <th>Last Updated</th>
+                                        <th>Contact Titles</th>
+                                        <th>Departments</th>
+                                        <th>Regions</th>
                                         <th class="action">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
 
                                     <tr>
-                                        <td data-title="Contact Name">Bernard Ware</td>
-                                        <td data-title="Contact Email"><a href="mailto:bernard.ware@company.com">bernard.ware@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
                                         <td data-title="Carrier">CNA</td>
+                                        <td data-title="Agency">Eagle</td>
+                                        <td data-title="Line of Business">Benefits, Commercial, Personal</td>
+                                        <td data-title="Contact Titles" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-title" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Departments" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-department" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Regions" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#region" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Action" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Carrier">Nationwide</td>
                                         <td data-title="Agency">IOA</td>
                                         <td data-title="Line of Business">Commercial</td>
-                                        <td data-title="State">Florida</td>
-                                        <td data-title="Region">Southeast</td>
-                                        <td data-title="Last Updated">5/24/2017</td>
+                                        <td data-title="Contact Titles" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-title" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Departments" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-department" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Regions" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#region" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
                                         <td data-title="Action" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
@@ -145,15 +178,24 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Name">Willam Carter</td>
-                                        <td data-title="Contact Email"><a href="mailto:william.carter@company.com">william.carter@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
-                                        <td data-title="Carrier">Nationwide</td>
+                                        <td data-title="Carrier">Hartford</td>
                                         <td data-title="Agency">Eagle</td>
                                         <td data-title="Line of Business">Personal</td>
-                                        <td data-title="State">Florida</td>
-                                        <td data-title="Region">Northeast</td>
-                                        <td data-title="Last Updated">5/18/2017</td>
+                                        <td data-title="Contact Titles" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-title" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Departments" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-department" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Regions" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#region" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
                                         <td data-title="Action" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
@@ -162,49 +204,49 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Name">Graham Hazel</td>
-                                        <td data-title="Contact Email"><a href="mailto:bernard.ware@company.com">graham.hazel@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
-                                        <td data-title="Carrier">Hartford</td>
+                                        <td data-title="Carrier">Liberty Mutual</td>
                                         <td data-title="Agency">IOA National</td>
                                         <td data-title="Line of Business">Benefits</td>
-                                        <td data-title="State">Florida</td>
-                                        <td data-title="Region">Central</td>
-                                        <td data-title="Last Updated">5/16/2017</td>
+                                        <td data-title="Contact Titles" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-title" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Departments" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-department" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Regions" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#region" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
                                         <td data-title="Action" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
-
                                     <tr>
-                                        <td data-title="Contact Name">Jason Pettway</td>
-                                        <td data-title="Contact Email"><a href="mailto:jason.pettway@company.com">jason.pettway@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
-                                        <td data-title="Carrier">Liberty Mutual</td>
-                                        <td data-title="Agency">Eagle</td>
-                                        <td data-title="Line of Business">Personal</td>
-                                        <td data-title="State">Florida</td>
-                                        <td data-title="Region">Southeast</td>
-                                        <td data-title="Last Updated">5/14/2017</td>
-                                        <td data-title="Action" class="actionBtn">
-                                           <div class="btn-cell">
-                                                <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-title="Contact Name">Shawn Walters</td>
-                                        <td data-title="Contact Email"><a href="mailto:shawn.walters@company.com">shawn.walters@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
                                         <td data-title="Carrier">Nationwide</td>
                                         <td data-title="Agency">IOA</td>
                                         <td data-title="Line of Business">Commercial</td>
-                                        <td data-title="State">Florida</td>
-                                        <td data-title="Region">Southeast</td>
-                                        <td data-title="Last Updated">5/14/2017</td>
+                                        <td data-title="Contact Titles" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-title" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Departments" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-department" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Regions" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#region" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
                                         <td data-title="Action" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
@@ -213,32 +255,24 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Name">Donald Marshall</td>
-                                        <td data-title="Contact Email"><a href="mailto:donald.marshall@company.com">donald.marshall@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
-                                        <td data-title="Carrier">CNA</td>
-                                        <td data-title="Agency">IOA</td>
-                                        <td data-title="Line of Business">Commercial</td>
-                                        <td data-title="State">Florida</td>
-                                        <td data-title="Region">Southwest</td>
-                                        <td data-title="Last Updated">5/14/2017</td>
-                                        <td data-title="Action" class="actionBtn">
-                                           <div class="btn-cell">
-                                                <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-title="Contact Name">Gregory Webb</td>
-                                        <td data-title="Contact Email"><a href="mailto:gregory.webb@company.com">gregory.webb@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
-                                        <td data-title="Carrier">Nationwide</td>
+                                        <td data-title="Carrier">Aetna</td>
                                         <td data-title="Agency">Eagle</td>
-                                        <td data-title="Line of Business">Personal</td>
-                                        <td data-title="State">Florida</td>
-                                        <td data-title="Region">Northeast</td>
-                                        <td data-title="Last Updated">5/12/2017</td>
+                                        <td data-title="Line of Business">Commercial</td>
+                                        <td data-title="Contact Titles" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-title" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Departments" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-department" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Regions" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#region" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
                                         <td data-title="Action" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
@@ -247,15 +281,24 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Name">Jonathan Fowler</td>
-                                        <td data-title="Contact Email"><a href="mailto:jonathan.fowler@company.com">jonathan.fowler@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
-                                        <td data-title="Carrier">Hartford</td>
+                                        <td data-title="Carrier">Knight of Insurance</td>
                                         <td data-title="Agency">IOA National</td>
                                         <td data-title="Line of Business">Benefits</td>
-                                        <td data-title="State">Florida</td>
-                                        <td data-title="Region">Southwest</td>
-                                        <td data-title="Last Updated">5/4/2017</td>
+                                        <td data-title="Contact Titles" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-title" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Departments" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-department" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Regions" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#region" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
                                         <td data-title="Action" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
@@ -264,15 +307,24 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Name">Dennis Snyder</td>
-                                        <td data-title="Contact Email"><a href="mailto:dennis.snyder@company.com">dennis.snyder@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
-                                        <td data-title="Carrier">Liberty Mutual</td>
+                                        <td data-title="Carrier">Great American</td>
                                         <td data-title="Agency">Eagle</td>
-                                        <td data-title="Line of Business">Personal</td>
-                                        <td data-title="State">Florida</td>
-                                        <td data-title="Region">Southwest</td>
-                                        <td data-title="Last Updated">5/2/2017</td>
+                                        <td data-title="Line of Business">Benefits</td>
+                                        <td data-title="Contact Titles" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-title" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Departments" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-department" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Regions" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#region" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
                                         <td data-title="Action" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
@@ -281,21 +333,58 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Name">Stephen Marshall</td>
-                                        <td data-title="Contact Email"><a href="mailto:stephen.marshall@company.com">stephen.marshall@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
-                                        <td data-title="Carrier">Nationwide</td>
+                                        <td data-title="Carrier">Jonathan's Insurance Agency</td>
+                                        <td data-title="Agency">IOA National</td>
+                                        <td data-title="Line of Business">Personal</td>
+                                        <td data-title="Contact Titles" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-title" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Departments" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-department" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Regions" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#region" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Action" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Carrier">Pennsylvania Life Insurance</td>
                                         <td data-title="Agency">IOA</td>
                                         <td data-title="Line of Business">Commercial</td>
-                                        <td data-title="State">Florida</td>
-                                        <td data-title="Region">Southwest</td>
-                                        <td data-title="Last Updated">5/1/2017</td>
+                                        <td data-title="Contact Titles" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-title" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Departments" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#contact-department" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
+                                        <td data-title="Regions" class="actionBtn">
+                                           <div class="btn-cell">
+                                                <a href="carriers.html#region" class="actionBlue"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </td>
                                         <td data-title="Action" class="actionBtn">
                                            <div class="btn-cell">
                                                 <a href="edit-carrier-contact.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
                                         </td>
                                     </tr>
+
+                                    
                                 </tbody>
                             </table>
                         </div>
