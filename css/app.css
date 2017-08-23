@@ -1171,6 +1171,32 @@ a.view:visited, a.view:hover {
    z-index: 100;
 }
 
+.icon-btn {
+   background-color: #296198;
+   color: #fff;
+   padding: 6px 9px;
+   border-radius: 4px;
+   font-size: 12px;
+   margin-top: 4px;
+   margin-right: 4px;
+   text-transform: uppercase;
+   position: sticky;
+   z-index: 100;
+}
+
+.icon-btn:hover, .icon-btn:focus {
+   background-color: #245280;
+   color: #fff;
+   padding: 6px 9px;
+   border-radius: 4px;
+   font-size: 12px;
+   margin-top: 4px;
+   margin-right: 4px;
+   text-transform: uppercase;
+   position: sticky;
+   z-index: 100;
+}
+
 .breadcrumb {
     background-color: #4995cf;
     border-radius: 5px 5px 0px 0px;
@@ -1285,6 +1311,38 @@ a.view:visited, a.view:hover {
    color: red;
 }
 
+.title-button select{
+	float: left;
+   width: 89%;	
+}
+
 .add-button, .add-button:hover {
    margin-top: -35px;
+}
+
+.title-button .add-button, .title-button .add-button:hover {
+	margin-top: 10px;
+	margin-right: 0;
+}
+
+.title-button .btn.active, .title-button .btn:active {
+	box-shadow: none;
+}
+
+.acquisition {
+	display: none;
+}
+
+.acquisition-field {
+   margin-top: -3px;
+}
+
+.acquisition-field1 {
+   margin-top: -1px;
+}
+
+@media (min-width: 992px) and (max-width: 1190px){
+	.title-button select {
+		width: 75%;
+	}
 }

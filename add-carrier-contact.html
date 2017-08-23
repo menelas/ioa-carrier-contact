@@ -158,30 +158,73 @@
                             </div>
 
                             <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                <label class="control-label" for="">Contact Title:</label>
-                                <select id="" name="" class="form-control">
-                                    <option value="">-- Please Select Title--</option>
-                                    <option value="">Sample Title 1</option>
-                                    <option value="">Sample Title 2</option>
-                                    <option value="">Sample Title 3</option>
-                                    <option value="">Sample Title 4</option>
-                                    <option value="">Sample Title 5</option>
-                                </select>
+                                <label class="control-label" for="">Contact Title:</label> 
+                                <div class="clearfix title-button">
+                                    <select id="" name="" class="form-control">
+                                        <option value="">-- Please Select Title--</option>
+                                        <option value="">Sample Title 1</option>
+                                        <option value="">Sample Title 2</option>
+                                        <option value="">Sample Title 3</option>
+                                        <option value="">Sample Title 4</option>
+                                        <option value="">Sample Title 5</option>
+                                    </select>
+                                    <a data-toggle="modal" data-target="#contact-title" class="btn icon-btn add-button pull-right"><i class="fa fa-plus"></i></a>
+                                </div>
                             </div>
 
+                                <div class="modal fade" id="contact-title" tabindex="-1" role="dialog" aria-labelledby="contact-titlelabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="contact-titlelabel">Add Contact Title</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <label class="required control-label" for="">Contact Title:</label>
+                                                <input id="" name="" class="required form-control input-md" required="" type="text">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button id="cancel" name="cancel" class="pull-left btn btn-default"> Cancel</button>
+                                                <button id="save" name="save" class="pull-right btn btn-primary"> Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
                             <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                <label class="control-label" for="">Contact Department:</label>
-                                <select id="" name="" class="form-control">
-                                    <option value="">-- Please Select Department--</option>
-                                    <option value="">Sample Department 1</option>
-                                    <option value="">Sample Department 2</option>
-                                    <option value="">Sample Department 3</option>
-                                    <option value="">Sample Department 4</option>
-                                    <option value="">Sample Department 5</option>
-                                </select>
+                                <label class="control-label" for="">Contact Department:</label>                    
+                                <div class="clearfix title-button">
+                                    <select id="" name="" class="form-control">
+                                        <option value="">-- Please Select Department--</option>
+                                        <option value="">Sample Department 1</option>
+                                        <option value="">Sample Department 2</option>
+                                        <option value="">Sample Department 3</option>
+                                        <option value="">Sample Department 4</option>
+                                        <option value="">Sample Department 5</option>
+                                    </select>
+                                    <a data-toggle="modal" data-target="#contact-department" class="btn icon-btn add-button pull-right"><i class="fa fa-plus"></i></a>
+                                </div>
                             </div>
                         </div>
+
+                            <div class="modal fade" id="contact-department" tabindex="-1" role="dialog" aria-labelledby="contact-departmentlabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="contact-departmentlabel">Add Contact Department</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <label class="required control-label" for="">Contact Department:</label>
+                                                <input id="" name="" class="required form-control input-md" required="" type="text">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button id="cancel" name="cancel" class="pull-left btn btn-default"> Cancel</button>
+                                                <button id="save" name="save" class="pull-right btn btn-primary"> Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
                         <div class="row">
 
@@ -262,7 +305,7 @@
 
                         <div class="row">
                             <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                <label class="required control-label" for="">Region:</label>
+                                <label class="control-label" for="">Region:</label>
                                 <select data-placeholder=" " multiple class="chosen-select-width" tabindex="16">
                                     <option>Southeast</option>
                                     <option>Southwest</option>
@@ -270,14 +313,26 @@
                                 </select>
                             </div>
 
-                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4 acquisition-field">
                                 <label class="control-label" for="">Acquisition Contact:</label>
-                                <input id="" name="" class="form-control input-md" required="" type="text">
+                                <input id="contact-acquisition" name="" value="true" type="checkbox">
+                                <input id="" name="" class="form-control input-md acquisition" required="" type="text">
                             </div>
 
-                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4 acquisition acquisition-field1">
                                 <label class="control-label" for="">Acquisition Contact Email:</label>
                                 <input id="" name="" class="form-control input-md" required="" type="text">
+                            </div>
+                        </div>
+
+                        <div class="row acquisition">  
+                            <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <label class="control-label" for="">Function</label>
+                                <select id="" name="" class="form-control">
+                                    <option value="">-- Please Select Function --</option>
+                                    <option value="">Marketing</option>
+                                    <option value="">Licensing</option>
+                                </select>
                             </div>
                         </div>
 
@@ -297,6 +352,6 @@
         <p>Copyright &#169; 2017 Insurance Office of America. All rights reserved. Version 1.0</p>
     </div>
     <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
-
+    <script type="text/javascript" src="js/show-acquisition.js"></script>
 </body>
 </html>

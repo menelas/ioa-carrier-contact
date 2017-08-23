@@ -1,3 +1,9 @@
+## 2017-7-23
+• Edit carrier contact search filter, page
+• Dashboard changed from carriers to carrier contacts
+• Add new contact acquisition checkbox created
+• Rest of changes on email
+
 ## 2017-7-14
 • Dashboard list change from carrier contacts, to carriers
 • On carrier contact search filter -  state has been removed
