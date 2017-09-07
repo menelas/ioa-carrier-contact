@@ -68,12 +68,12 @@
                     </li>
 
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i><span> Carrier </span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-file-text fa-2x" aria-hidden="true"></i><span>Agreements</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="carriers.html">Add New Carrier</a>
+                            <li><a href="add-agreement.html">Add New Agreements</a>
                                 <hr>
                             </li>
-                            <li><a href="carrier-search.html">View Carriers</a>
+                            <li><a href="agreement-search.html">View Agreements</a>
                                 <hr>
                             </li>
                         </ul>
@@ -83,10 +83,20 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-id-card fa-2x" aria-hidden="true"></i><span>Contact</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="add-carrier-contact.html">Add New Contact</a>
+                            <li><a href="add-carrier-contact.html">Add New Contacts</a>
                                 <hr>
                             </li>
                             <li><a href="carrier-contact-search.html">View Contacts</a>
+                                <hr>
+                            </li>
+                        </ul>
+                        <hr />
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-gears fa-2x" aria-hidden="true"></i><span> Administration </span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-search.html">Carriers</a>
                                 <hr>
                             </li>
                         </ul>
@@ -116,16 +126,21 @@
                 <div class="title-header spacerbottom20">
                     <div class="head-drop">
                         <div class="btn-group">
-                            Add Carrier
+                            Edit Carrier
                         </div>
                     </div>
                 </div>
 
                 <form role="form">
                     <fieldset>
-                        <div class="form col-sm-12 col-md-12 col-lg-4">
-                            <label class="required control-label" for="">Carrier:</label>
-                            <input id="" name="" class="form-control input-md" value="Hartford" type="text">
+                        <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                            <label class="required control-label" for="">Carrier</label>
+                            <div class="input-group">
+                                <input class="form-control" id="CarrierId" name="" type="search" value="" autocomplete="off">
+                                <input name="" type="hidden" class="autocompletehidden" value="">
+                                <div class="input-group-addon"><i class="fa fa-search"></i>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="form-group col-sm-12 col-md-4 col-lg-4">
@@ -162,7 +177,9 @@
                             </li>
                             <li class="sep"><a data-toggle="tab" href="#contact-department" aria-expanded="false">Departments</a>
                             </li>
-                            <li class="sep"><a data-toggle="tab" href="#region" aria-expanded="true">Regions</a>
+                            <li class="sep"><a data-toggle="tab" href="#region" aria-expanded="false">Regions</a>
+                            </li>
+                            <li class="sep"><a data-toggle="tab" href="#agreement" aria-expanded="false">Agreements</a>
                             </li>
                         </ul>
                     </div>
@@ -296,258 +313,431 @@
                         </div>
                         <!-- Modal -->
 
-                            <div id="contact-department" class="tab-pane tabs-info portal-tables fade in">
+                        <div id="contact-department" class="tab-pane tabs-info portal-tables fade in">
 
-                                <div class="pull-right">
-                                    <a href="#" class="btn carrier-btn add-button pull-right"><i class="fa fa-plus"></i> Add Department</a>
-                                </div>
-
-                                <table class="table-hover table-striped table-condensed cf app-tables">
-                                    <thead class="cf">
-                                        <tr>
-                                            <th class="col-lg-2"></th>
-                                            <th class="col-lg-2 action"></th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <td data-title="Department">Accounting</td>
-                                            <td data-title="Actions" class="actionBtn">
-                                                <div class="btn-cell">
-                                                    <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                </div>
-                                                <div class="btn-cell">
-                                                    <a href="" class="actionRed"><i class="fa fa-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td data-title="Department">Development</td>
-                                            <td data-title="Actions" class="actionBtn">
-                                                <div class="btn-cell">
-                                                    <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                </div>
-                                                <div class="btn-cell">
-                                                    <a href="" class="actionRed"><i class="fa fa-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td data-title="Department">Marketing</td>
-                                            <td data-title="Actions" class="actionBtn">
-                                                <div class="btn-cell">
-                                                    <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                </div>
-                                                <div class="btn-cell">
-                                                    <a href="" class="actionRed"><i class="fa fa-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td data-title="Department">Operations</td>
-                                            <td data-title="Actions" class="actionBtn">
-                                                <div class="btn-cell">
-                                                    <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                </div>
-                                                <div class="btn-cell">
-                                                    <a href="" class="actionRed"><i class="fa fa-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td data-title="Department">Production</td>
-                                            <td data-title="Actions" class="actionBtn">
-                                                    <div class="btn-cell">
-                                                        <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                    </div>
-                                                    <div class="btn-cell">
-                                                        <a href="" class="actionRed"><i class="fa fa-close"></i></a>
-                                                    </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                <div class="text-center">
-                                    <nav aria-label="Page navigation">
-                                        <ul class="pagination">
-                                            <li>
-                                                <a href="#" aria-label="Previous">
-                                                    <span aria-hidden="true">«</span>
-                                                </a>
-                                            </li>
-                                            <li class="active"><a href="#">1</a>
-                                            </li>
-                                            <li><a href="#">2</a>
-                                            </li>
-                                            <li><a href="#">3</a>
-                                            </li>
-                                            <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-
+                            <div class="pull-right">
+                                <a href="#" class="btn carrier-btn add-button pull-right"><i class="fa fa-plus"></i> Add Department</a>
                             </div>
 
-                            <!-- Edit Modal -->
-                            <div id="edit-contact-department" class="modal fade" role="dialog">
-                                <div class="modal-dialog">
+                            <table class="table-hover table-striped table-condensed cf app-tables">
+                                <thead class="cf">
+                                    <tr>
+                                        <th class="col-lg-2"></th>
+                                        <th class="col-lg-2 action"></th>
+                                    </tr>
+                                </thead>
 
-                                    <!-- Modal content-->
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Edit </h4>
-                                        </div>
-                                        <div class="modal-body">
-
-                                            <div class="form-group">
-                                                <label class="control-label" for="">Contact Department:</label>
-                                                <input id="" name="" class="form-control input-md" value="Accounting" type="text">
+                                <tbody>
+                                    <tr>
+                                        <td data-title="Department">Accounting</td>
+                                        <td data-title="Actions" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                             </div>
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
 
+                                    <tr>
+                                        <td data-title="Department">Development</td>
+                                        <td data-title="Actions" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Department">Marketing</td>
+                                        <td data-title="Actions" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Department">Operations</td>
+                                        <td data-title="Actions" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Department">Production</td>
+                                        <td data-title="Actions" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="text-center">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a>
+                                        </li>
+                                        <li><a href="#">3</a>
+                                        </li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                        </div>
+
+                        <!-- Edit Modal -->
+                        <div id="edit-contact-department" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Edit </h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="form-group">
+                                            <label class="control-label" for="">Contact Department:</label>
+                                            <input id="" name="" class="form-control input-md" value="Accounting" type="text">
                                         </div>
 
-                                        <div class="modal-footer">
-                                            <button id="save" name="save" class="btn btn-primary"> Save</button>
-                                            <button id="cancel" name="cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button id="save" name="save" class="btn btn-primary"> Save</button>
+                                        <button id="cancel" name="cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Modal -->
+                        </div>
+                        <!-- Modal -->
 
-                                <div id="region" class="tab-pane tabs-info portal-tables fade in">
+                        <div id="region" class="tab-pane tabs-info portal-tables fade in">
 
-                                    <div class="pull-right">
-                                        <a href="#" class="btn carrier-btn add-button pull-right"><i class="fa fa-plus"></i> Add Region</a>
+                            <div class="pull-right">
+                                <a href="#" class="btn carrier-btn add-button pull-right"><i class="fa fa-plus"></i> Add Region</a>
+                            </div>
+
+                            <table class="table-hover table-striped table-condensed cf app-tables">
+                                <thead class="cf">
+                                    <tr>
+                                        <th class="col-lg-2"></th>
+                                        <th class="col-lg-2 action"></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td data-title="Region">Central</td>
+                                        <td data-title="Actions" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Region">Southeast</td>
+                                        <td data-title="Actions" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Region">Southwest</td>
+                                        <td data-title="Actions" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Region">Northeast</td>
+                                        <td data-title="Actions" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Region">Northwest</td>
+                                        <td data-title="Actions" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                            <div class="btn-cell">
+                                                <a href="" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="text-center">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a>
+                                        </li>
+                                        <li><a href="#">3</a>
+                                        </li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <!-- Edit Modal -->
+                        <div id="edit-region" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Edit </h4>
                                     </div>
+                                    <div class="modal-body">
 
-                                    <table class="table-hover table-striped table-condensed cf app-tables">
-                                        <thead class="cf">
-                                            <tr>
-                                                <th class="col-lg-2"></th>
-                                                <th class="col-lg-2 action"></th>
-                                            </tr>
-                                        </thead>
-
-                                        <tbody>
-                                            <tr>
-                                                <td data-title="Region">Central</td>
-                                                <td data-title="Actions" class="actionBtn">
-                                                        <div class="btn-cell">
-                                                            <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                        </div>
-                                                        <div class="btn-cell">
-                                                            <a href="" class="actionRed"><i class="fa fa-close"></i></a>
-                                                        </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td data-title="Region">Southeast</td>
-                                                <td data-title="Actions" class="actionBtn">
-                                                        <div class="btn-cell">
-                                                            <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                        </div>
-                                                        <div class="btn-cell">
-                                                            <a href="" class="actionRed"><i class="fa fa-close"></i></a>
-                                                        </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td data-title="Region">Southwest</td>
-                                                <td data-title="Actions" class="actionBtn">
-                                                        <div class="btn-cell">
-                                                            <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                        </div>
-                                                        <div class="btn-cell">
-                                                            <a href="" class="actionRed"><i class="fa fa-close"></i></a>
-                                                        </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td data-title="Region">Northeast</td>
-                                                <td data-title="Actions" class="actionBtn">
-                                                        <div class="btn-cell">
-                                                            <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                        </div>
-                                                        <div class="btn-cell">
-                                                            <a href="" class="actionRed"><i class="fa fa-close"></i></a>
-                                                        </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td data-title="Region">Northwest</td>
-                                                <td data-title="Actions" class="actionBtn">
-                                                        <div class="btn-cell">
-                                                            <a data-toggle="modal" data-target="#edit-contact-title" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                        </div>
-                                                        <div class="btn-cell">
-                                                            <a href="" class="actionRed"><i class="fa fa-close"></i></a>
-                                                        </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-
-                                    <div class="text-center">
-                                        <nav aria-label="Page navigation">
-                                            <ul class="pagination">
-                                                <li>
-                                                    <a href="#" aria-label="Previous">
-                                                        <span aria-hidden="true">«</span>
-                                                    </a>
-                                                </li>
-                                                <li class="active"><a href="#">1</a>
-                                                </li>
-                                                <li><a href="#">2</a>
-                                                </li>
-                                                <li><a href="#">3</a>
-                                                </li>
-                                                <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-
-                                <!-- Edit Modal -->
-                                <div id="edit-region" class="modal fade" role="dialog">
-                                    <div class="modal-dialog">
-
-                                        <!-- Modal content-->
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                <h4 class="modal-title">Edit </h4>
-                                            </div>
-                                            <div class="modal-body">
-
-                                                <div class="form-group">
-                                                    <label class="control-label" for="">Region:</label>
-                                                    <input id="" name="" class="form-control input-md" value="Central" type="text">
-                                                </div>
-
-                                            </div>
-
-                                            <div class="modal-footer">
-                                                <button id="save" name="save" class="btn btn-primary"> Save</button>
-                                                <button id="cancel" name="cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                            </div>
+                                        <div class="form-group">
+                                            <label class="control-label" for="">Region:</label>
+                                            <input id="" name="" class="form-control input-md" value="Central" type="text">
                                         </div>
+
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button id="save" name="save" class="btn btn-primary"> Save</button>
+                                        <button id="cancel" name="cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
                                     </div>
                                 </div>
-                                <!-- Modal -->
+                            </div>
+                        </div>
+                        <!-- Modal -->
+
+                        <div id="agreement" class="tab-pane tabs-info portal-tables fade in">
+
+                            <div class="pull-right">
+                                <a href="add-agreement.html" class="btn carrier-btn add-button pull-right"><i class="fa fa-plus"></i> Add Agreement</a>
+                            </div>
+
+                            <table class="table-hover table-striped table-condensed cf app-tables">
+                                <thead class="cf">
+                                    <tr>
+                                        <th>Branch</th>
+                                        <th>Agency</th>
+                                        <th>Line of Business</th>
+                                        <th>Location</th>
+                                        <th>Effective Date</th>
+                                        <th>Master Code</th>
+                                        <th>Sub Code</th>
+                                        <th>Profit Sharing</th>
+                                        <th class="action">Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td data-title="Branch">Branch One</td>
+                                        <td data-title="Agency">IOA, Eagle</td>
+                                        <td data-title="Line of Business">Commercial, Personal</td>
+                                        <td data-title="Location">Location 1</td>
+                                        <td data-title="Effective Date">09/07/2017</td>
+                                        <td data-title="Master Code">MHT2012</td>
+                                        <td data-title="Sub Code">SUC2001</td>
+                                        <td data-title="Record Type Dependent">Carrier</td>
+                                        <td data-title="Profit Sharing">Yes</td>
+                                        <td data-title="Actions" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                            <div class="btn-cell">
+                                                <a href="" data-toggle="tooltip" data-placement="top" title="Terminate Agreement" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Branch">Branch Two</td>
+                                        <td data-title="Agency">Eagle</td>
+                                        <td data-title="Line of Business">Personal</td>
+                                        <td data-title="Location">Location 2</td>
+                                        <td data-title="Effective Date">09/06/2017</td>
+                                        <td data-title="Master Code">MHT2011</td>
+                                        <td data-title="Sub Code">SUC2002</td>
+                                        <td data-title="Record Type Dependent">Carrier</td>
+                                        <td data-title="Profit Sharing">----</td>
+                                        <td data-title="Actions" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                            <div class="btn-cell">
+                                                <a href="" data-toggle="tooltip" data-placement="top" title="Terminate Agreement" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Branch">Branch Three</td>
+                                        <td data-title="Agency">IOA</td>
+                                        <td data-title="Line of Business">Commercial</td>
+                                        <td data-title="Location">Location 4</td>
+                                        <td data-title="Effective Date">09/05/2017</td>
+                                        <td data-title="Master Code">MHT2011</td>
+                                        <td data-title="Sub Code">SUC2000</td>
+                                        <td data-title="Record Type Dependent">Carrier</td>
+                                        <td data-title="Profit Sharing">Yes</td>
+                                        <td data-title="Actions" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                            <div class="btn-cell">
+                                                <a href="" data-toggle="tooltip" data-placement="top" title="Terminate Agreement" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Branch">Branch Four</td>
+                                        <td data-title="Agency">IOA National</td>
+                                        <td data-title="Line of Business">Benefits</td>
+                                        <td data-title="Location">Location 5</td>
+                                        <td data-title="Effective Date">09/05/2017</td>
+                                        <td data-title="Master Code">MHT2011</td>
+                                        <td data-title="Sub Code">SUC2000</td>
+                                        <td data-title="Record Type Dependent">Carrier</td>
+                                        <td data-title="Profit Sharing">Yes</td>
+                                        <td data-title="Actions" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                            <div class="btn-cell">
+                                                <a href="" data-toggle="tooltip" data-placement="top" title="Terminate Agreement" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-title="Branch">Branch Five</td>
+                                        <td data-title="Agency">Eagle</td>
+                                        <td data-title="Line of Business">Commercial</td>
+                                        <td data-title="Location">Location 6</td>
+                                        <td data-title="Effective Date">09/04/2017</td>
+                                        <td data-title="Master Code">MHT2011</td>
+                                        <td data-title="Sub Code">SUC2000</td>
+                                        <td data-title="Record Type Dependent">Carrier</td>
+                                        <td data-title="Profit Sharing">----</td>
+                                        <td data-title="Actions" class="actionBtn">
+                                            <div class="btn-cell">
+                                                <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                            <div class="btn-cell">
+                                                <a href="" data-toggle="tooltip" data-placement="top" title="Terminate Agreement" class="actionRed"><i class="fa fa-close"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="text-center">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                                <span aria-hidden="true">«</span>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a>
+                                        </li>
+                                        <li><a href="#">2</a>
+                                        </li>
+                                        <li><a href="#">3</a>
+                                        </li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <!-- Edit Modal -->
+                        <div id="edit-region" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Edit </h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="form-group">
+                                            <label class="control-label" for="">Region:</label>
+                                            <input id="" name="" class="form-control input-md" value="Central" type="text">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button id="save" name="save" class="btn btn-primary"> Save</button>
+                                        <button id="cancel" name="cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal -->
                     </div>
                 </div>
 
@@ -560,6 +750,7 @@
         </div>
         <script type="text/javascript" src="js/nav-tabs-homepage.js"></script>
         <script type="text/javascript" src="chosen_v1.6.2/docsupport/multi-select.js"></script>
+        <script type="text/javascript" src="js/tooltip.js"></script>
 
 </body>
 

@@ -118,49 +118,54 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title-header spacerbottom20">
                     <div class="pull-left head-drop">
                         <div class="btn-group">
-                            Carrier Search
+                            Agreement Search
                         </div>
                     </div>
                     <div class="pull-right">
-                        <a href="carriers.html" class="btn carrier-btn pull-right"><i class="fa fa-plus"></i> Add New Carrier</a>
+                        <a href="add-agreement.html" class="btn carrier-btn pull-right"><i class="fa fa-plus"></i> Add New Agreement</a>
                     </div>
                 </div>
 
                     <div class="container-content">
                         <form>
                             <div class="row">
-                                <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                                <div class="col-sm-12 col-md-4 col-lg-4">
                                     <label class="required control-label" for="">Carrier</label>
                                     <div class="input-group">
-                                        <input class="form-control" id="CarrierId" name="" type="search" value="" autocomplete="off">
+                                        <input class="form-control"  id="CarrierId" name="" type="search" value="" autocomplete="off">
                                         <input name="" type="hidden" class="autocompletehidden" value="">
-                                        <div class="input-group-addon"><i class="fa fa-search"></i>
-                                        </div>
+                                        <div class="input-group-addon"><i class="fa fa-search"></i></div>
                                     </div>
                                 </div>
 
-                                <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                    <label class="control-label" for="">Agency</label>
-                                    <select data-placeholder="-- Select Agencies --" multiple class="chosen-select-width" tabindex="16">
-                                        <option>IOA</option>
-                                        <option>Eagle</option>
-                                        <option>IOA National</option>
+                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <label class="control-label" for="">Master Code</label>
+                                    <input id="" name="" class="form-control input-md" required="" type="text">
+                                </div>
+
+                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <label class="control-label">Record Type Dependent</label>
+                                    <select data-placeholder="-- Select Dependents --" multiple class="chosen-select-width" tabindex="16">
+                                        <option>Carrier</option>
+                                        <option>Broker</option>
                                     </select>
                                 </div>
 
-                                <div class="form-group col-sm-12 col-md-4 col-lg-4">
-                                    <label class="control-label">Line of Business</label>
-                                    <select data-placeholder="-- Select Line of Businessess --" multiple class="chosen-select-width" tabindex="16">
-                                        <option>Commercial</option>
-                                        <option>Personal</option>
-                                        <option>Benefits</option>
-                                    </select>
+                                <div class="col-sm-12 col-md-4 col-lg-4 spacer20">
+                                    <label class="control-label" for="">Profit Sharing:</label>
+                                    <input id="" name="" value="true" type="checkbox">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-4 spacer30">
+                                    <button id="carriercontact" class="btn btn-primary">Clear Filters</button>
                                 </div>
                             </div>
                         </form>
                     </div>
 
-                        <div class="tablecontainer">
+                        <div class="tablecontainer spacer50">
                             <div class="col-md-12 col-xs-12 panel-heading tableheader">
                                 <div class="pull-left head-drop">
                                      Search Results
@@ -173,8 +178,9 @@
                                         <thead class="cf">
                                             <tr>
                                                 <th>Carrier</th>
-                                                <th>Agency</th>
-                                                <th>Line of Business</th>
+                                                <th>Master Code</th>
+                                                <th>Record Type Dependent</th>
+                                                <th>Profit Sharing</th>
                                                 <th class="action">Action</th>
                                             </tr>
                                         </thead>
@@ -182,55 +188,60 @@
 
                                             <tr>
                                                 <td data-title="Carrier">CNA</td>
-                                                <td data-title="Agency">IOA National</td>
-                                                <td data-title="Line of Business">Benefits</td>
+                                                <td data-title="Master Code">CNA1201</td>
+                                                <td data-title="Record Type Dependent">Broker</td>
+                                                <td data-title="Profit Sharing">Yes</td>
                                                 <td data-title="Action" class="actionBtn">
                                                    <div class="btn-cell">
-                                                        <a href="carriers.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                     </div>
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td data-title="Carrier">Nationwide</td>
-                                                <td data-title="Agency">IOA</td>
-                                                <td data-title="Line of Business">Commercial</td>
+                                                <td data-title="Master Code">NAT1201</td>
+                                                <td data-title="Record Type Dependent">Carrier</td>
+                                                <td data-title="Profit Sharing">Yes</td>
                                                 <td data-title="Action" class="actionBtn">
                                                    <div class="btn-cell">
-                                                        <a href="carriers.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                     </div>
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td data-title="Carrier">Hartford</td>
-                                                <td data-title="Agency">Eagle</td>
-                                                <td data-title="Line of Business">Personal</td>
+                                                <td data-title="Master Code">HAR1201</td>
+                                                <td data-title="Record Type Dependent">Broker</td>
+                                                <td data-title="Profit Sharing">----</td>
                                                 <td data-title="Action" class="actionBtn">
                                                    <div class="btn-cell">
-                                                        <a href="carriers.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                     </div>
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td data-title="Carrier">Liberty Mutual</td>
-                                                <td data-title="Agency">IOA National</td>
-                                                <td data-title="Line of Business">Benefits</td>
+                                                <td data-title="Master Code">LBM1201</td>
+                                                <td data-title="Record Type Dependent">Broker</td>
+                                                <td data-title="Profit Sharing">Yes</td>
                                                 <td data-title="Action" class="actionBtn">
                                                    <div class="btn-cell">
-                                                        <a href="carriers.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                     </div>
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td data-title="Carrier">Nationwide</td>
-                                                <td data-title="Agency">IOA</td>
-                                                <td data-title="Line of Business">Commercial</td>
+                                                <td data-title="Master Code">NAT1201</td>
+                                                <td data-title="Record Type Dependent">Carrier</td>
+                                                <td data-title="Profit Sharing">----</td>
                                                 <td data-title="Action" class="actionBtn">
                                                    <div class="btn-cell">
-                                                        <a href="carriers.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
                                                     </div>
                                                 </td>
                                             </tr>

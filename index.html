@@ -54,12 +54,12 @@
                     </li>
 
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i><span> Carrier </span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-file-text fa-2x" aria-hidden="true"></i><span>Agreements</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="carriers.html">Add New Carrier</a>
+                            <li><a href="add-agreement.html">Add New Agreements</a>
                                 <hr>
                             </li>
-                            <li><a href="carrier-search.html">View Carriers</a>
+                            <li><a href="agreement-search.html">View Agreements</a>
                                 <hr>
                             </li>
                         </ul>
@@ -69,10 +69,20 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-id-card fa-2x" aria-hidden="true"></i><span>Contact</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="add-carrier-contact.html">Add New Contact</a>
+                            <li><a href="add-carrier-contact.html">Add New Contacts</a>
                                 <hr>
                             </li>
                             <li><a href="carrier-contact-search.html">View Contacts</a>
+                                <hr>
+                            </li>
+                        </ul>
+                        <hr />
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-gears fa-2x" aria-hidden="true"></i><span> Administration </span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-search.html">Carriers</a>
                                 <hr>
                             </li>
                         </ul>
@@ -113,9 +123,9 @@
                             <table class="table-hover table-striped table-condensed cf">
                                 <thead class="cf">
                                     <tr>
-                                        <th>Contact Name</th>
-                                        <th>Contact Email</th>
-                                        <th>Contact Phone Number</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone Number</th>
                                         <th>Title</th>
                                         <th>Carrier</th>
                                         <th>Agency</th>
@@ -127,9 +137,9 @@
                                 <tbody>
 
                                     <tr>
-                                        <td data-title="Contact Name">Bernard Ware</td>
-                                        <td data-title="Contact Email"><a href="mailto:bernard.ware@company.com">bernard.ware@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
+                                        <td data-title="Name">Bernard Ware</td>
+                                        <td data-title="Email"><a href="mailto:bernard.ware@company.com">bernard.ware@company.com</a></td>
+                                        <td data-title="Phone Number">407-788-3000</td>
                                         <td data-title="Title">Supervisor</td>
                                         <td data-title="Carrier">CNA</td>
                                         <td data-title="Agency">IOA</td>
@@ -143,9 +153,9 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Name">Willam Carter</td>
-                                        <td data-title="Contact Email"><a href="mailto:william.carter@company.com">william.carter@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
+                                        <td data-title="Name">Willam Carter</td>
+                                        <td data-title="Email"><a href="mailto:william.carter@company.com">william.carter@company.com</a></td>
+                                        <td data-title="Phone Number">407-788-3000</td>
                                         <td data-title="Title">Supervisor</td>
                                         <td data-title="Carrier">Nationwide</td>
                                         <td data-title="Agency">Eagle</td>
@@ -159,9 +169,9 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Name">Graham Hazel</td>
-                                        <td data-title="Contact Email"><a href="mailto:bernard.ware@company.com">graham.hazel@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
+                                        <td data-title="Name">Graham Hazel</td>
+                                        <td data-title="Email"><a href="mailto:bernard.ware@company.com">graham.hazel@company.com</a></td>
+                                        <td data-title="Phone Number">407-788-3000</td>
                                         <td data-title="Title">Supervisor</td>
                                         <td data-title="Carrier">Hartford</td>
                                         <td data-title="Agency">IOA National</td>
@@ -175,9 +185,9 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Name">Jason Pettway</td>
-                                        <td data-title="Contact Email"><a href="mailto:jason.pettway@company.com">jason.pettway@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
+                                        <td data-title="Name">Jason Pettway</td>
+                                        <td data-title="Email"><a href="mailto:jason.pettway@company.com">jason.pettway@company.com</a></td>
+                                        <td data-title="Phone Number">407-788-3000</td>
                                         <td data-title="Title">Supervisor</td>
                                         <td data-title="Carrier">Liberty Mutual</td>
                                         <td data-title="Agency">Eagle</td>
@@ -191,9 +201,9 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Name">Shawn Walters</td>
-                                        <td data-title="Contact Email"><a href="mailto:shawn.walters@company.com">shawn.walters@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
+                                        <td data-title="Name">Shawn Walters</td>
+                                        <td data-title="Email"><a href="mailto:shawn.walters@company.com">shawn.walters@company.com</a></td>
+                                        <td data-title="Phone Number">407-788-3000</td>
                                         <td data-title="Title">Supervisor</td>
                                         <td data-title="Carrier">Nationwide</td>
                                         <td data-title="Agency">IOA</td>
@@ -207,9 +217,9 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Name">Donald Marshall</td>
-                                        <td data-title="Contact Email"><a href="mailto:donald.marshall@company.com">donald.marshall@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
+                                        <td data-title="Name">Donald Marshall</td>
+                                        <td data-title="Email"><a href="mailto:donald.marshall@company.com">donald.marshall@company.com</a></td>
+                                        <td data-title="Phone Number">407-788-3000</td>
                                         <td data-title="Title">Supervisor</td>
                                         <td data-title="Carrier">CNA</td>
                                         <td data-title="Agency">IOA</td>
@@ -223,9 +233,9 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Name">Gregory Webb</td>
-                                        <td data-title="Contact Email"><a href="mailto:gregory.webb@company.com">gregory.webb@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
+                                        <td data-title="Name">Gregory Webb</td>
+                                        <td data-title="Email"><a href="mailto:gregory.webb@company.com">gregory.webb@company.com</a></td>
+                                        <td data-title="Phone Number">407-788-3000</td>
                                         <td data-title="Title">Supervisor</td>
                                         <td data-title="Carrier">Nationwide</td>
                                         <td data-title="Agency">Eagle</td>
@@ -239,9 +249,9 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Name">Jonathan Fowler</td>
-                                        <td data-title="Contact Email"><a href="mailto:jonathan.fowler@company.com">jonathan.fowler@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
+                                        <td data-title="Name">Jonathan Fowler</td>
+                                        <td data-title="Email"><a href="mailto:jonathan.fowler@company.com">jonathan.fowler@company.com</a></td>
+                                        <td data-title="Phone Number">407-788-3000</td>
                                         <td data-title="Title">Supervisor</td>
                                         <td data-title="Carrier">Hartford</td>
                                         <td data-title="Agency">IOA National</td>
@@ -255,9 +265,9 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Name">Dennis Snyder</td>
-                                        <td data-title="Contact Email"><a href="mailto:dennis.snyder@company.com">dennis.snyder@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
+                                        <td data-title="Name">Dennis Snyder</td>
+                                        <td data-title="Email"><a href="mailto:dennis.snyder@company.com">dennis.snyder@company.com</a></td>
+                                        <td data-title="Phone Number">407-788-3000</td>
                                         <td data-title="Title">Supervisor</td>
                                         <td data-title="Carrier">Liberty Mutual</td>
                                         <td data-title="Agency">Eagle</td>
@@ -271,9 +281,9 @@
                                     </tr>
 
                                     <tr>
-                                        <td data-title="Contact Name">Stephen Marshall</td>
-                                        <td data-title="Contact Email"><a href="mailto:stephen.marshall@company.com">stephen.marshall@company.com</td>
-                                        <td data-title="Contact Phone Number">407-788-3000</td>
+                                        <td data-title="Name">Stephen Marshall</td>
+                                        <td data-title="Email"><a href="mailto:stephen.marshall@company.com">stephen.marshall@company.com</a></td>
+                                        <td data-title="Phone Number">407-788-3000</td>
                                         <td data-title="Title">Supervisor</td>
                                         <td data-title="Carrier">Nationwide</td>
                                         <td data-title="Agency">IOA</td>

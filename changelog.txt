@@ -1,3 +1,8 @@
+## 2017-9-7
+• Added Agreements menu
+• Removed Carriers menu
+• Added Administration menu
+
 ## 2017-7-23
 • Edit carrier contact search filter, page
 • Dashboard changed from carriers to carrier contacts
@@ -8,7 +13,7 @@
 • Dashboard list change from carrier contacts, to carriers
 • On carrier contact search filter -  state has been removed
 • On carrier contact search result -  agency, region, and state has been removed.
-• On add carrier contact - contact phone number is no longer required, as well as acquisition contact and contact email
+• On add carrier contact - Phone Number is no longer required, as well as acquisition contact and Email
 • On edit carrier contact, notes has been removed from the tab and added on the same page below contact
 • Add notes on edit carrier contact, now has the option to flag red
 • On edit carrier contact search - when note is flag red, then display red icon

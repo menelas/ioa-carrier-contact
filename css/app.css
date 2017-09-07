@@ -697,6 +697,10 @@ table {
    }
 }
 
+.btn {
+    padding-top: 4px;
+}
+
 .btn-group.open .dropdown-toggle {
    box-shadow: none;
    color: #fff;
@@ -1345,4 +1349,21 @@ a.view:visited, a.view:hover {
 	.title-button select {
 		width: 75%;
 	}
+}
+
+.chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+   padding-top: 8px !important;
+}
+
+.cancel-button {
+    margin-right: 30px;
+}
+
+.datepicker table {
+   border:none;
+}
+
+.contact-info {
+   margin-top: 10px;
+   margin-bottom: 10px;
 }

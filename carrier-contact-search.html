@@ -63,12 +63,12 @@
                     </li>
 
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i><span> Carrier </span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-file-text fa-2x" aria-hidden="true"></i><span>Agreements</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="carriers.html">Add New Carrier</a>
+                            <li><a href="add-agreement.html">Add New Agreements</a>
                                 <hr>
                             </li>
-                            <li><a href="carrier-search.html">View Carriers</a>
+                            <li><a href="agreement-search.html">View Agreements</a>
                                 <hr>
                             </li>
                         </ul>
@@ -78,10 +78,20 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-id-card fa-2x" aria-hidden="true"></i><span>Contact</span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="add-carrier-contact.html">Add New Contact</a>
+                            <li><a href="add-carrier-contact.html">Add New Contacts</a>
                                 <hr>
                             </li>
                             <li><a href="carrier-contact-search.html">View Contacts</a>
+                                <hr>
+                            </li>
+                        </ul>
+                        <hr />
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-gears fa-2x" aria-hidden="true"></i><span> Administration </span><i class="fa fa-plus fa-2x location" aria-hidden="true"></i><i class="fa fa-minus fa-2x location" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="carrier-search.html">Carriers</a>
                                 <hr>
                             </li>
                         </ul>
@@ -123,12 +133,16 @@
                             <div class="row">
                                 <div class="form-group col-sm-12 col-md-6 col-lg-3">
                                     <label class="control-label" for="">Carrier</label>
-                                    <input id="" name="" class="form-control input-md" required="" type="text">
+                                    <div class="input-group">
+                                        <input class="form-control" id="CarrierId" name="" type="search" value="" autocomplete="off">
+                                        <input name="" type="hidden" class="autocompletehidden" value="">
+                                        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                                    </div>
                                 </div>
 
                                 <div class="form-group col-sm-12 col-md-6 col-lg-3">
                                     <label class="control-label" for="">Agency</label>
-                                    <select data-placeholder=" " multiple class="chosen-select-width" tabindex="16">
+                                    <select data-placeholder=" -- Select Agency --" multiple class="chosen-select-width" tabindex="16">
                                         <option>IOA</option>
                                         <option>Eagle</option>
                                         <option>IOA National</option>
@@ -137,7 +151,7 @@
 
                                 <div class="form-group col-sm-12 col-md-6 col-lg-3">
                                     <label class="control-label" for="">Line of Business</label>
-                                    <select data-placeholder=" " multiple class="chosen-select-width" tabindex="16">
+                                    <select data-placeholder=" -- Select Line of Business --" multiple class="chosen-select-width" tabindex="16">
                                         <option>Commercial</option>
                                         <option>Personal</option>
                                         <option>Benefits</option>
@@ -145,28 +159,30 @@
                                 </div>
 
                                 <div class="form-group col-sm-12 col-md-6 col-lg-3">
-                                    <label class="control-label" for="">Contact Name:</label>
+                                    <label class="control-label" for="">Name:</label>
                                     <input id="" name="" class="form-control input-md" required="" type="text">
                                 </div>
 
-                                <div class="form-group col-sm-12 col-md-4 col-lg-3">
-                                    <label class="control-label" for="">Function</label>
-                                    <select id="" name="" class="form-control">
-                                        <option value="">-- Please Select Function --</option>
-                                        <option value="">Marketing</option>
-                                        <option value="">Licensing</option>
+                                <div class="form-group col-sm-12 col-md-6 col-lg-3">
+                                    <label class="control-label" for="">Role: </label>
+                                    <select data-placeholder="-- Select Role -- " multiple class="chosen-select-width" tabindex="16">
+                                        <option>Accounting</option>
+                                        <option>Acquisitions</option>
+                                        <option>Commission Statements</option>
+                                        <option>Contracting</option>
+                                        <option>Licensing</option>
+                                        <option>Logins</option>
+                                        <option>Marketing</option>
+                                        <option>Operations</option>
+                                        <option>Principal</option>
+                                        <option>Underwriter</option>
                                     </select>
                                 </div>
 
-
-                                <div class="form-group col-lg-3 col-md-4 col-sm-12">
-                                    <input id="" name="" value="true" type="checkbox">
-                                    <label for="">Show acquisition contacts</label>
-                                </div>
                             </div>
 
                             <div class="row">
-                                <div class="form-group col-sm-12 col-md-6 col-lg-4">
+                                <div class="form-group col-sm-12 col-md-6 col-lg-4 spacer20">
                                     <button id="carriercontact" class="btn btn-primary">Clear Filters</button>
                                 </div>
                             </div>
@@ -174,7 +190,7 @@
                         </form>
                     </div>
 
-                        <div class="tablecontainer">
+                        <div class="tablecontainer spacer20">
                             <div class="col-md-12 col-xs-12 panel-heading tableheader">
                                 <div class="pull-left head-drop">
                                      Search Results
@@ -186,9 +202,9 @@
                                     <table class="table-hover table-striped table-condensed cf">
                                         <thead class="cf">
                                             <tr>
-                                                <th>Contact Name</th>
-                                                <th>Contact Email</th>
-                                                <th>Contact Phone Number</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Phone Number</th>
                                                 <th>Title</th>
                                                 <th>Carrier</th>
                                                 <th>Agency</th>
@@ -201,9 +217,9 @@
                                         <tbody>
 
                                             <tr>
-                                                <td data-title="Contact Name">Bernard Ware</td>
-                                                <td data-title="Contact Email"><a href="mailto:bernard.ware@company.com">bernard.ware@company.com</td>
-                                                <td data-title="Contact Phone Number">407-788-3000</td>
+                                                <td data-title="Name">Bernard Ware</td>
+                                                <td data-title="Email"><a href="mailto:bernard.ware@company.com">bernard.ware@company.com</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
                                                 <td data-title="Title">Supervisor</td>
                                                 <td data-title="Carrier">CNA</td>
                                                 <td data-title="Agency">IOA</td>
@@ -219,9 +235,9 @@
                                             </tr>
 
                                             <tr>
-                                                <td data-title="Contact Name">William Carter</td>
-                                                <td data-title="Contact Email"><a href="mailto:william.carter@company.com">william.carter@company.com</td>
-                                                <td data-title="Contact Phone Number">407-788-3000</td>
+                                                <td data-title="Name">William Carter</td>
+                                                <td data-title="Email"><a href="mailto:william.carter@company.com">william.carter@company.com</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
                                                 <td data-title="Title">Supervisor</td>
                                                 <td data-title="Carrier">CNA</td>
                                                 <td data-title="Agency">IOA</td>
@@ -236,9 +252,9 @@
                                             </tr>
 
                                             <tr>
-                                                <td data-title="Contact Name">Graham Hazel</td>
-                                                <td data-title="Contact Email"><a href="mailto:graham.hazel@company.com">graham.hazel@company.com</td>
-                                                <td data-title="Contact Phone Number">407-788-3000</td>
+                                                <td data-title="Name">Graham Hazel</td>
+                                                <td data-title="Email"><a href="mailto:graham.hazel@company.com">graham.hazel@company.com</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
                                                 <td data-title="Title">Supervisor</td>
                                                 <td data-title="Carrier">CNA</td>
                                                 <td data-title="Agency">IOA</td>
@@ -253,9 +269,9 @@
                                             </tr>
 
                                             <tr>
-                                                <td data-title="Contact Name">Jason Pettway</td>
-                                                <td data-title="Contact Email"><a href="mailto:bernard.ware@company.com">jason.pettway@company.com</td>
-                                                <td data-title="Contact Phone Number">407-788-3000</td>
+                                                <td data-title="Name">Jason Pettway</td>
+                                                <td data-title="Email"><a href="mailto:bernard.ware@company.com">jason.pettway@company.com</td>
+                                                <td data-title="Phone Number">407-788-3000</td>
                                                 <td data-title="Title">Supervisor</td>
                                                 <td data-title="Carrier">CNA</td>
                                                 <td data-title="Agency">IOA</td>
