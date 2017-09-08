@@ -1315,7 +1315,7 @@ a.view:visited, a.view:hover {
    color: red;
 }
 
-.title-button select{
+.title-button select, .carrier-add, .branch-add {
 	float: left;
    width: 89%;	
 }
@@ -1344,10 +1344,47 @@ a.view:visited, a.view:hover {
 .acquisition-field1 {
    margin-top: -1px;
 }
-
+.box-with-plus-btn label{
+	display: block;
+}
+.box-with-plus-btn .add-button{
+	margin: 10px 0 0;
+}
+.box-with-plus-btn .input-group-addon{
+    border-radius: 4px !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-left: 0;
+}
+.box-with-plus-btn .carrier-add {
+    width: 100%;
+}
+.custom-group-form .carrier-add{
+	float: left;
+	width: 89%;
+}
+.custom-group-form .chosen-container{
+	float: left;
+	width: 89% !important;
+}
+.custom-group-form .add-button{
+	float: left;
+}
+.custom-group-form  .add-button{
+	margin: 10px 0 0;
+}
 @media (min-width: 992px) and (max-width: 1190px){
 	.title-button select {
 		width: 75%;
+	}
+	.box-with-plus-btn .add-button {
+		margin-left: 0;
+	}
+	.custom-group-form .carrier-add {
+		width: 75%;
+	}
+	.custom-group-form .chosen-container{
+		width: 75% !important;
 	}
 }
 
