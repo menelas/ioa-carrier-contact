@@ -663,6 +663,10 @@ table {
    border: 1px solid #ccc;
 }
 
+.no-border {
+   border: none;
+}
+
 .app-tables {
    border-bottom: 1px solid #ccc !important;
    border-top: 1px solid #ccc !important;
@@ -699,6 +703,10 @@ table {
 
 .btn {
     padding-top: 4px;
+}
+
+.btn-table, .btn-table:hover {
+   margin:5px 5px -24px 0px;
 }
 
 .btn-group.open .dropdown-toggle {
@@ -929,10 +937,9 @@ td a {
 .statusBtn {
    display: inline-block;
    color: #fff;
-   padding: 5px 10px;
-   width: 70px;
+   padding: 5px 8px;
    border-radius: 5px;
-   font-size: 11px;
+   font-size: 9px;
    text-transform: uppercase;
    text-align: center;
 }

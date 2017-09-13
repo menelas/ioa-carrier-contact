@@ -1,3 +1,7 @@
+## 2017-9-13
+• Updated Agreements page
+• Updated edit contact page
+
 ## 2017-9-7
 • Added Agreements menu
 • Removed Carriers menu

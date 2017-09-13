@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/edit-agreement.css">
+
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/phone-mask.js"></script>
+    <script type="text/javascript" src="js/collapsible.js"></script>
 
     <!-- Chosen Multi Select -->
     <link rel="stylesheet" href="chosen_v1.6.2/docsupport/style.css">
@@ -138,7 +141,7 @@
 
                             <div class="form-group col-sm-12 col-md-12 col-lg-4">
                                 <label class="required control-label" for="">Carrier:</label>
-                                <input id="" name="" class="form-control input-md" value="Hartford" type="text">
+                                <input id="" name="" class="form-control input-md" value="Hartford" readonly type="text">
                             </div>
 
                             <div class="form-group col-sm-12 col-md-4 col-lg-4">
@@ -184,7 +187,7 @@
 
                             <div class="form-group col-sm-12 col-md-4 col-lg-4">
                                 <label class="control-label" for="">Effective Date:</label>
-                                <input type="search" value="09/07/2017" class="form-control input-sm" name="date" id="date" placeholder="Date">
+                                <input type="search" value="09/07/2017" class="form-control input-md" name="date" id="date" placeholder="Date">
                             </div>
                         </div>
 
@@ -216,173 +219,333 @@
                         </div>
                     </form>
 
-                    <div class="butttons-footer spacer20">
-                        <button id="close-claim" name="" class="btn btn-danger pull-left close-claim"> Terminate Agreement</button>
-                        <button id="save" name="" class="btn btn-primary save-button pull-right save-button"> Save</button>
-                        <button id="cancel" name="" class="btn btn-default pull-right cancel-button"> Cancel</button>
+                    <div class="butttons-footer spacer20 clearfix">
+                        <button id="cancel" name="cancel" class="btn btn-default"> Cancel</button>
+                        <button id="save" name="save" class="pull-right btn btn-primary"> Save</button>
                     </div>
 
-
-                    <div class="tablecontainer">
-
-                        <div class="col-md-12 col-xs-12 panel-heading tableheader spacer60">
-                            <div class="pull-left head-drop">
-                                All Agreements
-                            </div>
-                        </div>
-
-                        <div class="panel-body">
-
-                            <div class="portal-tables">
-                                <table class="table-hover table-striped table-condensed cf">
-                                    <thead class="cf">
-                                        <tr>
-                                            <th>Branch</th>
-                                            <th>Agency</th>
-                                            <th>Line of Business</th>
-                                            <th>Location</th>
-                                            <th>Effective Date</th>
-                                            <th>Master Code</th>
-                                            <th>Sub Code</th>
-                                            <th>Record Type Dependent</th>
-                                            <th>Profit Sharing</th>
-                                            <th class="action">Action</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <td data-title="Branch">Branch One</td>
-                                            <td data-title="Agency">IOA, Eagle</td>
-                                            <td data-title="Line of Business">Commercial, Personal</td>
-                                            <td data-title="Location">Location 1</td>
-                                            <td data-title="Effective Date">09/07/2017</td>
-                                            <td data-title="Master Code">MHT2012</td>
-                                            <td data-title="Sub Code">SUC2001</td>
-                                            <td data-title="Record Type Dependent">Carrier</td>
-                                            <td data-title="Profit Sharing">Yes</td>
-                                            <td data-title="Actions" class="actionBtn">
-                                                <div class="btn-cell">
-                                                    <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                </div>
-                                                <div class="btn-cell">
-                                                    <a href="" data-toggle="tooltip" data-placement="top" title="Terminate Agreement" class="actionRed"><i class="fa fa-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td data-title="Branch">Branch Two</td>
-                                            <td data-title="Agency">Eagle</td>
-                                            <td data-title="Line of Business">Personal</td>
-                                            <td data-title="Location">Location 2</td>
-                                            <td data-title="Effective Date">09/06/2017</td>
-                                            <td data-title="Master Code">MHT2011</td>
-                                            <td data-title="Sub Code">SUC2002</td>
-                                            <td data-title="Record Type Dependent">Carrier</td>
-                                            <td data-title="Profit Sharing">----</td>
-                                            <td data-title="Actions" class="actionBtn">
-                                                <div class="btn-cell">
-                                                    <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                </div>
-                                                <div class="btn-cell">
-                                                    <a href="" data-toggle="tooltip" data-placement="top" title="Terminate Agreement" class="actionRed"><i class="fa fa-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td data-title="Branch">Branch Three</td>
-                                            <td data-title="Agency">IOA</td>
-                                            <td data-title="Line of Business">Commercial</td>
-                                            <td data-title="Location">Location 4</td>
-                                            <td data-title="Effective Date">09/05/2017</td>
-                                            <td data-title="Master Code">MHT2011</td>
-                                            <td data-title="Sub Code">SUC2000</td>
-                                            <td data-title="Record Type Dependent">Carrier</td>
-                                            <td data-title="Profit Sharing">Yes</td>
-                                            <td data-title="Actions" class="actionBtn">
-                                                <div class="btn-cell">
-                                                    <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                </div>
-                                                <div class="btn-cell">
-                                                    <a href="" data-toggle="tooltip" data-placement="top" title="Terminate Agreement" class="actionRed"><i class="fa fa-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td data-title="Branch">Branch Four</td>
-                                            <td data-title="Agency">IOA National</td>
-                                            <td data-title="Line of Business">Benefits</td>
-                                            <td data-title="Location">Location 5</td>
-                                            <td data-title="Effective Date">09/05/2017</td>
-                                            <td data-title="Master Code">MHT2011</td>
-                                            <td data-title="Sub Code">SUC2000</td>
-                                            <td data-title="Record Type Dependent">Carrier</td>
-                                            <td data-title="Profit Sharing">Yes</td>
-                                            <td data-title="Actions" class="actionBtn">
-                                                <div class="btn-cell">
-                                                    <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                </div>
-                                                <div class="btn-cell">
-                                                    <a href="" data-toggle="tooltip" data-placement="top" title="Terminate Agreement" class="actionRed"><i class="fa fa-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td data-title="Branch">Branch Five</td>
-                                            <td data-title="Agency">Eagle</td>
-                                            <td data-title="Line of Business">Commercial</td>
-                                            <td data-title="Location">Location 6</td>
-                                            <td data-title="Effective Date">09/04/2017</td>
-                                            <td data-title="Master Code">MHT2011</td>
-                                            <td data-title="Sub Code">SUC2000</td>
-                                            <td data-title="Record Type Dependent">Broker</td>
-                                            <td data-title="Profit Sharing">----</td>
-                                            <td data-title="Actions" class="actionBtn">
-                                                <div class="btn-cell">
-                                                    <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
-                                                </div>
-                                                <div class="btn-cell">
-                                                    <a href="" data-toggle="tooltip" data-placement="top" title="Terminate Agreement" class="actionRed"><i class="fa fa-close"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="text-center">
-                            <nav aria-label="Page navigation">
-                                <ul class="pagination">
-                                    <li>
-                                        <a href="#" aria-label="Previous">
-                                            <span aria-hidden="true">«</span>
-                                        </a>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div id="nav-tabs">
+                                <ul class="nav nav-tabs spacer20">
+                                    <li class="active"><a data-toggle="tab" href="#agreements"><i class="fa fa-file-text"></i> All Agreements</a>
                                     </li>
-                                    <li class="active"><a href="#">1</a>
-                                    </li>
-                                    <li><a href="#">2</a>
-                                    </li>
-                                    <li><a href="#">3</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" aria-label="Next">
-                                            <span aria-hidden="true">»</span>
-                                        </a>
+                                    <li class="sep"><a data-toggle="tab" href="#master-codes"><i class="fa fa-list-ul"></i> Master Codes</a>
                                     </li>
                                 </ul>
-                            </nav>
+                            </div>
+
+                            <div class="tab-content">
+                                <div id="agreements" class="tab-pane fade in active tabs-info">
+                                    <div class="portal-tables">
+                                        <table class="table-hover table-striped table-condensed cf no-border">
+                                            <thead class="cf">
+                                                <tr>
+                                                    <th>Branch</th>
+                                                    <th>Agency</th>
+                                                    <th>Line of Business</th>
+                                                    <th>Location</th>
+                                                    <th>Effective Date</th>
+                                                    <th>Master Code</th>
+                                                    <th>Sub Code</th>
+                                                    <th>Record Type Dependent</th>
+                                                    <th>Profit Sharing</th>
+                                                    <th class="action">Action</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="Branch">Branch One</td>
+                                                    <td data-title="Agency">IOA, Eagle</td>
+                                                    <td data-title="Line of Business">Commercial, Personal</td>
+                                                    <td data-title="Location">Location 1</td>
+                                                    <td data-title="Effective Date">09/07/2017</td>
+                                                    <td data-title="Master Code">MHT2012</td>
+                                                    <td data-title="Sub Code">SUC2001</td>
+                                                    <td data-title="Record Type Dependent">Carrier</td>
+                                                    <td data-title="Profit Sharing">Yes</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="" data-toggle="tooltip" data-placement="top" title="Terminate Agreement" class="actionRed"><i class="fa fa-close"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch">Branch Two</td>
+                                                    <td data-title="Agency">Eagle</td>
+                                                    <td data-title="Line of Business">Personal</td>
+                                                    <td data-title="Location">Location 2</td>
+                                                    <td data-title="Effective Date">09/06/2017</td>
+                                                    <td data-title="Master Code">MHT2011</td>
+                                                    <td data-title="Sub Code">SUC2002</td>
+                                                    <td data-title="Record Type Dependent">Carrier</td>
+                                                    <td data-title="Profit Sharing">----</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="" data-toggle="tooltip" data-placement="top" title="Terminate Agreement" class="actionRed"><i class="fa fa-close"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch">Branch Three</td>
+                                                    <td data-title="Agency">IOA</td>
+                                                    <td data-title="Line of Business">Commercial</td>
+                                                    <td data-title="Location">Location 4</td>
+                                                    <td data-title="Effective Date">09/05/2017</td>
+                                                    <td data-title="Master Code">MHT2011</td>
+                                                    <td data-title="Sub Code">SUC2000</td>
+                                                    <td data-title="Record Type Dependent">Carrier</td>
+                                                    <td data-title="Profit Sharing">Yes</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="" data-toggle="tooltip" data-placement="top" title="Terminate Agreement" class="actionRed"><i class="fa fa-close"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch">Branch Four</td>
+                                                    <td data-title="Agency">IOA National</td>
+                                                    <td data-title="Line of Business">Benefits</td>
+                                                    <td data-title="Location">Location 5</td>
+                                                    <td data-title="Effective Date">09/05/2017</td>
+                                                    <td data-title="Master Code">MHT2011</td>
+                                                    <td data-title="Sub Code">SUC2000</td>
+                                                    <td data-title="Record Type Dependent">Carrier</td>
+                                                    <td data-title="Profit Sharing">Yes</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="" data-toggle="tooltip" data-placement="top" title="Terminate Agreement" class="actionRed"><i class="fa fa-close"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Branch">Branch Five</td>
+                                                    <td data-title="Agency">Eagle</td>
+                                                    <td data-title="Line of Business">Commercial</td>
+                                                    <td data-title="Location">Location 6</td>
+                                                    <td data-title="Effective Date">09/04/2017</td>
+                                                    <td data-title="Master Code">MHT2011</td>
+                                                    <td data-title="Sub Code">SUC2000</td>
+                                                    <td data-title="Record Type Dependent">Broker</td>
+                                                    <td data-title="Profit Sharing">----</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a href="edit-agreement.html" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                        <div class="btn-cell">
+                                                            <a href="" data-toggle="tooltip" data-placement="top" title="Terminate Agreement" class="actionRed"><i class="fa fa-close"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination">
+                                                <li>
+                                                    <a href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">«</span>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="#">1</a>
+                                                </li>
+                                                <li><a href="#">2</a>
+                                                </li>
+                                                <li><a href="#">3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">»</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <div id="master-codes" class="tab-pane fade in tabs-info">
+                                	<button id="add-new-contact" name="add-new-contact" data-toggle="modal" data-target="#add-master-code" class="btn carrier-btn pull-right btn-table"> <i class="fa fa-plus"></i> ADD CODE</button>
+
+                                    <div class="portal-tables">
+                                        <table class="table-hover table-striped table-condensed cf no-border">
+                                            <thead class="cf">
+                                                <tr>
+                                                    <th>Code</th>
+                                                    <th>Start</th>
+                                                    <th class="action">Action</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="Code">MSB123 <span class="statusBtn green">Active</span></td>
+                                                    <td data-title="Start">09/13/2017</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Code">MSB345</td>
+                                                    <td data-title="Start">09/11/2017</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Code">MSB853</td>
+                                                    <td data-title="Start">09/10/2017</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Code">CJK434</td>
+                                                    <td data-title="Start">09/08/2017</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-title="Code">DKJ402</td>
+                                                    <td data-title="Start">09/07/2017</td>
+                                                    <td data-title="Actions" class="actionBtn">
+                                                        <div class="btn-cell">
+                                                            <a name="edit-contact" data-toggle="modal" data-target="#edit-master-code" class="actionBlue"><i class="fa fa-pencil"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <!--Add Code-->
+		                                <div class="modal fade" id="add-master-code" tabindex="-1" role="dialog" aria-labelledby="addlabel">
+		                                    <div class="modal-dialog" role="document">
+		                                        <div class="modal-content">
+
+		                                            <div class="modal-header">
+		                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		                                                <h4 class="modal-title" id="add-carrierlabel">Add Code</h4>
+		                                            </div>
+
+		                                            <div class="modal-body clearfix">
+			                                            <div class="form-group col-sm-12 col-md-12 col-lg-6">
+			                                                <label class="required control-label" for="">Code:</label>
+			                                                <input id="" name="" class="required form-control input-md" required="" type="text">
+			                                            </div>
+
+			                                            <div class="form-group col-sm-12 col-md-12 col-lg-6">
+							                                <label class="control-label" for="">Start:</label>
+							                                <input type="search" class="form-control input-md" name="date" id="date" placeholder="Date">
+							                            </div>
+		                                            </div>
+
+		                                            <div class="modal-footer">
+		                                                <button id="cancel" name="cancel" class="pull-left btn btn-default"> Cancel</button>
+		                                                <button id="save" name="save" class="pull-right btn btn-primary"> Save</button>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+
+
+		                                <!--Edit Code-->
+		                                <div class="modal fade" id="edit-master-code" tabindex="-1" role="dialog" aria-labelledby="editlabel">
+		                                    <div class="modal-dialog" role="document">
+		                                        <div class="modal-content">
+
+		                                            <div class="modal-header">
+		                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		                                                <h4 class="modal-title" id="add-carrierlabel">Edit Code</h4>
+		                                            </div>
+
+		                                            <div class="modal-body clearfix">
+			                                            <div class="form-group col-sm-12 col-md-12 col-lg-6">
+			                                                <label class="required control-label" for="">Code:</label>
+			                                                <input id="" name="" class="required form-control input-md" value="MSB345" required="" type="text">
+			                                            </div>
+
+			                                            <div class="form-group col-sm-12 col-md-12 col-lg-6">
+							                                <label class="control-label" for="">Start:</label>
+							                                <input type="search" class="form-control input-md" value="09/07/2017" name="date" id="date" placeholder="Date">
+							                            </div>
+		                                            </div>
+
+		                                            <div class="modal-footer">
+		                                                <button id="cancel" name="cancel" class="pull-left btn btn-default"> Cancel</button>
+		                                                <button id="save" name="save" class="pull-right btn btn-primary"> Save</button>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+
+                                    </div>
+
+                                    <div class="text-center">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination">
+                                                <li>
+                                                    <a href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">«</span>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="#">1</a>
+                                                </li>
+                                                <li><a href="#">2</a>
+                                                </li>
+                                                <li><a href="#">3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">»</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-
                 </div>
+
+                <div class="pull-right">
+                    <button id="terminate-agreement" name="" class="btn btn-danger"> Terminate Agreement</button>
+                </div>
+
             </div>
         </div>
+    </div>
     </div>
 
     <div class="text-center copyright">
