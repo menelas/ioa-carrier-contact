@@ -1,3 +1,6 @@
+## 2017-9-15
+• Added notes on agreements page
+
 ## 2017-9-13
 • Updated Agreements page
 • Updated edit contact page
