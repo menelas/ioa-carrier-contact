@@ -1,3 +1,6 @@
+## 2017-10-10
+• Added agreements tab on dashboard
+
 ## 2017-9-15
 • Added notes on agreements page
 

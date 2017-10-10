@@ -1011,6 +1011,7 @@ td a {
 
 .tablecontainer .cf td {
    padding: 15px 7px;
+   width: 10%;
 }
 
 .tablecontainer .cf td.actionBtn {
